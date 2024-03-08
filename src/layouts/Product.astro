@@ -1,0 +1,62 @@
+---
+interface Props {
+   title: string;
+   name: string;
+   desc: string;
+   img: string;
+   simsEdition: boolean;
+}
+
+const { title, name, desc, img, simsEdition } = Astro.props;
+import "../styles/spectro-theme.css";
+import "../styles/index.less";
+import "../styles/product.less";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import Feature from "../layouts/FeatureCard.astro";
+---
+
+<!doctype html>
+<html lang="cs">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Astro description" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{title}</title>
+   </head>
+   <body>
+      <Nav index={false} />
+      <main>
+         <header>
+            <h1>{name}</h1>
+            <p>{desc}</p>
+            <Image
+               src={import(`../assets/img/${img}.png`)}
+               alt=`Ilustrace znázorňující produkt ${name}`
+            />
+         </header>
+
+         <product-texts>
+            <slot name="texts" />
+         </product-texts>
+
+
+         <slot />
+
+         {
+            simsEdition && (
+               <a href="/comparison/">Porovnat s ostatními edicemi SIMS</a>
+            )
+         }
+      </main>
+      <Footer />
+      <!-- <script src="../scripts/DetectSystemTheme.js"></script> -->
+   </body>
+</html>
+
+<style lang="less">
+
+</style>

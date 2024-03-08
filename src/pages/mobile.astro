@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Product.astro";
+import Nav from "../components/Nav.astro";
+
+const name = "SIMS Mobile";
+const desc =
+   "Mobilní aplikace vytvořena v moderní technologii React Native s využitím pro koncové zákazníky, výjezdové služby, technické a manažerské pracovníky bezpečnostních agentur a pro ovládání výstupů M2M Easy 2 bezpečnostních komunikátorů.";
+const img = "mockup-mobile";
+const simsEdition = true;
+---
+
+<Layout
+   title=`${name} - SIMS SW`
+   name={name}
+   desc={desc}
+   img={img}
+   simsEdition={simsEdition}
+>
+   <p slot="texts">
+      Účelem provozu této aplikace je nepřetržitý příjem dat ze zabezpečovacích
+      zařízení monitorující střežené objekty a zobrazení těchto dat zákazníkovi
+      formou srozumitelných zpráv a alarmů v reálném čase v jeho mobilním
+      telefonu.
+   </p>
+
+   <p slot="texts">
+      Pro mobilní zařízení se systémem Android je aplikace dostupná na službě
+      Google play, pro mobilní zařízení s operačním systémem iOS je aplikace
+      dostupná na App Store. Uživatelé, kteří používají M2M Easy 2 komunikátory,
+      mohou ovládat jeho výstupy, na které mohou mít připojené například
+      bezpečnostní ústředny, brány, vrata, osvětlení, zavlažování, rolety atd.
+   </p>
+
+   <p slot="texts">
+      Alarmové zprávy přicházejí prostřednictvím tzv. PUSH notifikací, které se
+      zobrazí na obrazovce mobilního zařízení a klikem na ně se otevře aplikace
+      s detailem alarmové zprávy.
+   </p>
+
+   <h2>Funkce</h2>
+   <ul>
+      <li>
+         Zavedení objektů - automatické vytvoření objektu z první příchozí
+         zprávy
+      </li>
+      <li>
+         Monitorované objekty - EZS, PZS, komunikátory, Lokátory (Tracker,
+         GT100, GT101) – zobrazení aktuální polohy na mapě
+      </li>
+      <li>Přiřazení objektů uživatelům a jejich oprávnění</li>
+      <li>Zobrazení zpráv a alarmů (akcí), zprávy z objektu, historie zpráv</li>
+      <li>Správa kontaktů a číselných kódů</li>
+      <li>
+         Správa a ovládání výstupů a zobrazení vstupů (M2M Easy komunikátorů)
+      </li>
+      <li>
+         Periodické testy (autotesty), Časové limity - automatické ukončování s
+         nově příchozím testem
+      </li>
+   </ul>
+</Layout>

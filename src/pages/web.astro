@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Product.astro";
+import Nav from "../components/Nav.astro";
+
+const name = "SIMS Web";
+const desc =
+   "Jednoduchá intuitivní webová aplikace vhodná například pro správce budov, vrátnice, výjezdové služby nebo pro koncové zákazníky.";
+const img = "mockup-web";
+const simsEdition = true;
+---
+
+<Layout
+   title=`${name} - SIMS SW`
+   name={name}
+   desc={desc}
+   img={img}
+   simsEdition={simsEdition}
+>
+   <p slot="texts">
+      Účelem provozu tohoto produktu je nepřetržitý příjem dat ze zabezpečovacích zařízení monitorující střežené objekty a zobrazení těchto dat zákazníkovi formou srozumitelných zpráv a alarmů za účelem nejrychlejšího odbavení.
+   </p>
+
+   <p slot="texts">
+      Aplikace je vyvíjena v technologii Microsoft ASP.NET a běží ve všech podporovaných verzí webových prohlížečů jako například Edge, Chrome, Firefox a další.
+   </p>
+
+   <h2>Funkce</h2>
+
+   <ul>
+      <li>Funkce</li>
+      <li>
+         Zavedení objektů - automatické vytvoření objektu z první příchozí
+         zprávy
+      </li>
+      <li>
+         Monitorované objekty - EZS, PZS, komunikátory, Lokátory (Tracker,
+         GT100, GT101) – zobrazení aktuální a historcké polohy na mapě, Geo
+         zóny, RFID kódy – obchůzky
+      </li>
+      <li>Správa objektů, kontaktů, číselných kódů</li>
+      <li>Alarmy (akce) tříděné dle významu, Obsluha alarmů</li>
+      <li>Časové limity - automatické ukončování</li>
+      <li>Zprávy, Zprávy z objektů, historie zpráv</li>
+   </ul>
+</Layout>

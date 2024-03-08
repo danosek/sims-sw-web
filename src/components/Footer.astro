@@ -1,0 +1,29 @@
+---
+---
+
+<script>
+   // Get the current year
+   var currentYear = new Date().getFullYear();
+
+   // Find the element with id="copyright"
+   var copyrightElement = document.getElementById("copyright");
+
+   // Check if the element exists and if textContent is not null before updating its content
+   if (copyrightElement && copyrightElement.textContent !== null) {
+      // Update its content to include the current year
+      copyrightElement.textContent += currentYear;
+   } else {
+      console.error(
+         "Element with id 'copyright' not found or textContent is null.",
+      );
+   }
+</script>
+
+<footer>
+   <p>
+      <a href="principles.html">Principles of personal data processing</a>
+   </p>
+   <p>
+      <span id="copyright"></span><span>&ensp;© SW SIMS safety s.r.o</span>
+   </p>
+</footer>

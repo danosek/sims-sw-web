@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Product.astro";
+import Nav from "../components/Nav.astro";
+import Feature from "../layouts/FeatureCard.astro";
+
+const name = "SIMS Desktop";
+const desc =
+   "Komplexní systém pro bezpečnostní agentury připojující na PCO (pult centrální ochrany) libovolný počet střežených objektů.";
+const img = "mockup-server";
+const simsEdition = true;
+---
+
+<Layout
+   title=`${name} - SIMS SW`
+   name={name}
+   desc={desc}
+   img={img}
+   simsEdition={simsEdition}
+>
+   <p slot="texts">
+      Účelem provozu tohoto produktu je nepřetržitý příjem dat ze
+      zabezpečovacích zařízení monitorujících střežené objekty a zobrazení
+      těchto dat zákazníkovi formou srozumitelných zpráv a alarmů za účelem co
+      možná nejrychlejšího odbavení.
+   </p>
+
+   <p slot="texts">
+      Produkt SIMS Desktop je aplikace vyvíjena v technologii Windows
+      Presentation Foundation (WPF), která je součásti Microsoft .NET frameworku
+      pro operační systémy Windows všech verzí. Je to intuitivní aplikace
+      vyvíjena na míru potřebám našich zákazníků (bezpečnostních agentur).
+      Propracovaný systém disponuje množstvím funkcionalit, které usnadňují
+      práci operátorům, technikům ale i vedoucím pracovníkům. Přijaté zprávy se
+      třídí dle jejich významu na úrovni databáze, stejně jako automatické
+      ukončování limitů a dalších automatik, které napomáhají operátorům k
+      rychlému odbavení alarmů. Díky tomu jediný operátor dokáže bez problému
+      hlídat tisíce střežených objektů. Náš systém je vyvíjen na základě podnětů
+      našich zákazníků posbíraných po dobu více než třicetileté praxe. Našim
+      zákazníkům se snažíme vyjít maximálně vstříc a vymýšlíme pro ně
+      nejjednodušší a nejspolehlivější řešení.
+   </p>
+
+   <h2>Funkce</h2>
+
+   <ul>
+      <Feature
+         title="Zavedení objektů"
+         desc="Automatické vytvoření objektu z první příchozí zprávy"
+         img="radio"
+         color="red"
+      />
+      <Feature
+         title="Monitorované objekty"
+         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101) – zobrazení aktuální a historcké polohy na mapě, Geo zóny, RFID kódy – obchůzky"
+         img="computer"
+         color="pink"
+      />
+      <Feature
+         title="Správa"
+         desc="Správa objektů, kontaktů, adres, uživatelů a jejich oprávnění"
+         img="computer"
+         color="fuchsia"
+      />
+      <Feature
+         title="Alarmy"
+         desc="Alarmy (akce) tříděné dle významu, Obsluha alarmů, Vyřízené akce"
+         img="computer"
+         color="deeppurple"
+      />
+      <Feature
+         title="Periodické testy, Časové limity"
+         desc="Automatické ukončování s nově příchozím testem"
+         img="computer"
+         color="navy"
+      />
+      <Feature
+         title="Číselné kódy"
+         desc="Číselné kódy, Zobrazení popisu objektu při akci, zobrazení snímků z kamer"
+         img="computer"
+         color="blue"
+      />
+      <Feature
+         title="Zprávy"
+         desc="Zprávy, Zprávy z objektu, historie zpráv"
+         img="computer"
+         color="lightblue"
+      />
+      <Feature
+         title="Hovory"
+         desc="Vytáčení a přijímání hovorů a zaznamenávání jejich průběhů"
+         img="computer"
+         color="aqua"
+      />
+      <Feature
+         title="Události"
+         desc="Události, Otevírací doby, Limity, Obnovy událostí"
+         img="computer"
+         color="teal"
+      />
+      <Feature
+         title="SMS"
+         desc="SMS, Emaily, Události SMS"
+         img="computer"
+         color="green"
+      />
+      <Feature
+         title="Plánovač"
+         desc="Plánovač, Karta objektu, Výjezdové služby"
+         img="computer"
+         color="lightgreen"
+      />
+   </ul>
+</Layout>

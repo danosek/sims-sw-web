@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Index.astro";
+import Product from "../layouts/ProductCard.astro";
+---
+
+<Layout title="SIMS SW">
+   <main>
+      <!-- About-->
+
+      <h2 id="about">O nás</h2>
+      <about-texts>
+         <p>
+            Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních
+            služeb a informačních systémů pro monitorování elektronických
+            bezpečnostních zařízení.
+         </p>
+         <hr>
+         <p>
+            Základem našeho software je nepřetržitý příjem dat ze
+            zabezpečovacích zařízení monitorující střežené objekty. Pomocí
+            produktů SIMS vyhodnocujeme a zobrazujeme tato data ve formě zpráv
+            našim zákazníkům v reálném čase.
+         </p>
+      </about-texts>
+
+      <!-- SIMS-->
+
+      <h2 id="products">Produkty</h2>
+      <products>
+         <Product
+            name="SIMS Desktop"
+            url="desktop"
+            img="computer"
+            desc="Komplexní systém pro bezpečnostní agentury připojující na PCO (pult centrální ochrany) libovolný počet střežených objektů."
+         />
+         <Product
+            name="SIMS Web"
+            url="web"
+            img="app-window-mac"
+            desc="Jednoduchá intuitivní webová aplikace vhodná například pro správce budov, vrátnice, výjezdové služby nebo pro koncové zákazníky."
+         />
+         <Product
+            name="SIMS Mobile"
+            url="mobile"
+            img="smartphone"
+            desc="Mobilní aplikace vytvořena v moderní technologii React Native s využitím pro koncové zákazníky, výjezdové služby, technické a manažerské pracovníky bezpečnostních agentur a pro ovládání výstupů M2M Easy 2 bezpečnostních komunikátorů."
+         />
+         <Product
+            name="Eniterm"
+            url="eniterm"
+            img="radio"
+            desc="Aplikace Eniterm disponuje ovladači všech nejčastěji používaných bezpečnostních systémů, komunikátorů a lokátorů. Na základě toho jsme schopni přijímat data ze zařízení téměř všech výrobců."
+         />
+      </products>
+      <product-comparison>
+         <!--p Porovnejte funkčnost všech edicí a zjistěte, která je pro vás ta pravá.-->
+         <a href="/comparison/">Porovnat</a>
+      </product-comparison>
+      <cloud-vs-local>
+         <h4>Cloud vs lokální úložiště</h4>
+         <p class="p-bg">
+            Našim zákazníkům nabízíme možnost provozovat SIMS spřipojením na náš
+            cloudový server (SIMSWEB.CZ) nebo lokálně na svém serveru. Stejně
+            tak služby (produktu Eniterm) můžou být instalovány na našem
+            komunikačním serveru (SIMSWEB.EU) nebo na serveru zákazníka.
+         </p>
+         <p>
+            Výhodou provozu SIMS na našem cloudovém serveru je, že zákazník si
+            nemusí pořizovat vlastní server s licencí Microsoft SQL Server a
+            nemusí se starat o správu a údržbu databáze. Na cloud serveru má
+            zákazník také k dispozici webovou aplikaci (produkt SIMS Web).
+         </p>
+         <p>
+            Ideální variantou je mít jeden server jako hlavní a druhý používat
+            jako záložní a zprávy zapisovat na oba servery současně. V případě
+            výpadku jednoho ze serverů není zákazník nějak omezen a pracuje
+            nerušeně dál na druhém serveru.
+         </p>
+      </cloud-vs-local>
+
+      <!-- Contact-->
+      <h2 id="contact">Kontakt</h2>
+      <boxes>
+         <box>
+            <p>SW SIMS safety, s.r.o.</p>
+         </box>
+         <box>
+            <p><b>IČO</b><span>28648803</span></p>
+         </box>
+         <box>
+            <p><b>Schránka</b><span>zw9x6cy</span></p>
+         </box>
+         <box>
+            <p>
+               <b>Adresa</b>
+               <address>
+                  <span>Na Výsluní 477</span><span>783 61 Hlubočky</span>
+               </address>
+            </p>
+         </box>
+         <box>
+            <p><b>E-mail</b><a href="mailto:info@sims.cz">info@sims.cz</a></p>
+         </box>
+         <box>
+            <p>
+               <b>Telefon</b><a href="tel:+420602748687"
+                  >+420&nbsp;602&nbsp;748&nbsp;687</a
+               >
+            </p>
+         </box>
+      </boxes>
+   </main>
+</Layout>
+
+<style lang="less">
+   html {
+      scroll-padding-block-start: 96px;
+   }
+   about-texts {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(30ch, 40ch) 1px minmax(30ch, 40ch));
+
+      p {
+         margin-block: 0;
+      }
+
+      hr {
+         height: 100%;
+         margin: 0;
+      }
+   }
+   products {
+      display: grid;
+      gap: 1rem;
+      margin-block-start: 1rem;
+
+      @media screen and (min-width: 720px) {
+         grid-template-rows: auto 1fr;
+         grid-template-columns: repeat(
+            auto-fit,
+            minmax(30ch, 1fr) minmax(30ch, 1fr)
+         );
+      }
+   }
+
+   #about:not(:focus):not(:active) {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+   }
+</style>

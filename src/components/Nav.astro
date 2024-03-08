@@ -1,0 +1,77 @@
+---
+interface Props {
+   index: boolean;
+}
+const { index } = Astro.props;
+
+import { Image } from "astro:assets";
+import logoWithText from "../assets/img/logo.png";
+---
+
+<nav>
+   <nav-content>
+      <a href="/"><Image src={logoWithText} alt="SIMS SW logo" /></a>
+
+      {
+         index && (
+            <>
+               <a href="#products">Produkty</a>
+               <a href="#contact">Kontakt</a>
+            </>
+         )
+      }
+
+      {
+         !index && (
+            <>
+               <a href="/">Zpět domů</a>
+            </>
+         )
+      }
+   </nav-content>
+</nav>
+
+<style lang="less">
+   nav {
+      position: sticky;
+      inset-block-start: 0;
+      -webkit-backdrop-filter: blur(30px) saturate(150%);
+      backdrop-filter: blur(30px) saturate(150%);
+      background-color: var(--surface-main-translucent);
+      z-index: 10;
+   }
+   nav-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
+      margin-inline: auto;
+      padding-block-end: 1rem;
+
+      @media screen and (min-width: 400px) {
+         flex-direction: row;
+         gap: 1rem;
+         align-items: center;
+         padding-block-end: 0;
+
+         // a:first-child {
+         //    margin-inline-end: auto;
+         // }
+      }
+
+      a[href] {
+         color: var(--text-primary);
+         text-decoration: none;
+         font-family: var(--font-stack-headings);
+         font-size: var(--font-size-base);
+         font-weight: var(--heading-weight);
+         letter-spacing: -0.01ch;
+         font-feature-settings: var(--heading-features);
+      }
+   }
+
+   img {
+      inline-size: ~"clamp(128px, 18vw, 160px)";
+      block-size: auto;
+   }
+</style>

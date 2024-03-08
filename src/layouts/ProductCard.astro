@@ -1,0 +1,28 @@
+---
+interface Props {
+   name: string;
+   url: string;
+   desc: string;
+   img: string;
+}
+
+const { name, url, desc, img } = Astro.props;
+import "../styles/product-card.less";
+import { Image } from "astro:assets";
+const bgUrl = `url(\"../assets/img/${img}.svg\")`;
+---
+
+<product>
+   <!-- <Image
+      src={import(`../assets/img/${img}.svg`)}
+      alt=`Ilustrace znázorňující produkt ${name}`
+   /> -->
+   <h3><a href=`/${url}`>{name}</a></h3>
+   <p>{desc}</p>
+   <a href=`/${url}`></a>
+</product>
+
+
+<style define:vars={{ bgUrl }}>
+   background-image: var(--bgUrl);
+</style>
