@@ -1,18 +1,19 @@
 // Typeface
 
 @font-face {
-	font-family: "Plus Jakarta Sans";
+  font-family: "pjs";
   font-weight: 200 800;
-	src: local("Plus Jakarta Sans"), local("Plus Jakarta Sans Variable"), url("/fonts/plus-jakarta-sans.ttf") format("truetype");
+  src: local("Plus Jakarta Sans"), local("Plus Jakarta Sans Variable"), url("/assets/fonts/plus-jakarta-sans.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "intr";
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  src: url("/fonts/inter.woff2?v=3.19") format("woff2") tech("variations"),
-       url("/fonts/inter.woff2?v=3.19") format("woff2-variations");
+  src: local("Inter"), local("Inter var"),
+    url("/assets/fonts/inter.woff2?v=3.19") format("woff2") tech("variations"),
+    url("/assets/fonts/inter.woff2?v=3.19") format("woff2-variations");
 }
 
 
@@ -21,11 +22,12 @@
 .type-scale(@var, @exponent, @coef: 1, @base: 16, @ratio: 1.15) {
   @size: @base * pow(@ratio, @exponent);
 
-  & when (@exponent = 0) {
+  & when (@exponent =0) {
     --font-size-@{var}: unit(round(@size * @coef, 0), px);
   }
 
-  & when (@exponent > 0), (@coef < 1) {
+  & when (@exponent > 0),
+  (@coef < 1) {
     --font-size-@{var}: unit(round(@size / @base * @coef, 4), rem);
   }
 
@@ -35,11 +37,12 @@
 .type-scale-m(@var, @exponent, @coef: 1, @base: 17, @ratio: 1.3) {
   @size: @base * pow(@ratio, @exponent);
 
-  & when (@exponent = 0) {
+  & when (@exponent =0) {
     --font-size-@{var}: unit(round(@size * @coef, 0), px);
   }
 
-  & when (@exponent > 0), (@coef < 1) {
+  & when (@exponent > 0),
+  (@coef < 1) {
     --font-size-@{var}: unit(round(@size / @base * @coef, 4), rem);
   }
 
@@ -49,11 +52,12 @@
 .type-scale-l(@var, @exponent, @coef: 1, @base: 18, @ratio: 1.4) {
   @size: @base * pow(@ratio, @exponent);
 
-  & when (@exponent = 0) {
+  & when (@exponent =0) {
     --font-size-@{var}: unit(round(@size * @coef, 0), px);
   }
 
-  & when (@exponent > 0), (@coef < 1) {
+  & when (@exponent > 0),
+  (@coef < 1) {
     --font-size-@{var}: unit(round(@size / @base * @coef, 4), rem);
   }
 
@@ -150,7 +154,7 @@
   --font-size-xxl: clamp(1.7rem, 3.2vw + 1rem, 3.5rem);
   --font-size-xxxl: clamp(2.1rem, 6.8vw + 0.7rem, 5rem);
   --font-size-mega: clamp(2.5rem, 9.8vw + 0rem, 7.3rem);
- 
+
   /* Line height */
   --line-height-text: 1.55;
   --line-height-medium: 1.3;
@@ -163,33 +167,39 @@
   font-feature-settings: initial;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: inherit;
-	line-height: var(--line-height-dense);;
-	font-family: var(--font-stack-headings);
-	font-weight: var(--heading-weight);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  line-height: var(--line-height-dense);
+  ;
+  font-family: var(--font-stack-headings);
+  font-weight: var(--heading-weight);
 }
 
 h1 {
-	.heading-xxxl();
+  .heading-xxxl();
 }
 
 h2 {
-	.heading-xxl();
+  .heading-xxl();
 }
 
 h3 {
-	.heading-l();
+  .heading-l();
 }
 
 h4 {
-	.heading-base();
+  .heading-base();
 }
 
 h5 {
-	.heading-base();
+  .heading-base();
 }
 
 h6 {
-	.heading-base();
+  .heading-base();
 }
