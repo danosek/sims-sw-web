@@ -10,7 +10,7 @@ import logoWithText from "../assets/img/logo.png";
 
 <nav>
    <nav-content>
-      <a href="/"><Image src={logoWithText} alt="SIMS SW logo" /></a>
+      <a href=`${import.meta.env.BASE_URL}`><Image src={logoWithText} alt="SIMS SW logo" /></a>
 
       {
          index && (
@@ -24,7 +24,7 @@ import logoWithText from "../assets/img/logo.png";
       {
          !index && (
             <>
-               <a href="/">Zpět domů</a>
+               <a href=`${import.meta.env.BASE_URL}`>Zpět domů</a>
             </>
          )
       }
