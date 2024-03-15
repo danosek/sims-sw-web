@@ -7,5 +7,5 @@ export default defineConfig({
     site: `https://danosek.github.io/`,
 	base: import.meta.env.DEV
 		? '/'
-		: '/sims-sw-web/',
+		: '/sims-sw-web',
 });
