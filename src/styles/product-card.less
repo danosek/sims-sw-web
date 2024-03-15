@@ -1,60 +1,34 @@
-.product(@color) {
-   --product-bg: ~"var(--surface-@{color}-contrast)";
-   --product-border: ~"var(--surface-@{color}-contrast)";
-   --product-color: ~"var(--text-primary-on-surface-@{color}-contrast)";
-   --product-shadow: ~"var(--surface-@{color}-subtle)";
-
-   &:hover {
-      --product-bg: ~"var(--surface-@{color}-moderate)";
-      --product-border: ~"var(--surface-@{color}-contrast)";
-      --product-color: ~"var(--text-primary-on-surface-@{color}-moderate)";
-   }
-}
-
 product {
    padding: 2em;
    border-radius: var(--radius-strong);
-   background-color: var(--product-bg);
-   color: var(--product-color);
+   background-color: var(--productCardBg);
+   color: var(--productCardColor);
    border: 2px solid var(--product-border);
-   background-image: var(--bgUrl);
+   background-image: var(--pattern);
    position: relative;
    display: grid;
    grid-template-rows: subgrid;
    grid-template-columns: subgrid;
    grid-row: span 2;
-
+   cursor: pointer;
    background-repeat: no-repeat;
-   background-position: 90% 90%;
-   background-size: 33%;
-   background-blend-mode: soft-light;
+   // background-position: 90% 90%;
+   // background-size: 33%;
+   background-blend-mode: luminosity;
    box-shadow: 0 8px 16px -2px var(--product-shadow), 0 2px 4px -1px var(--product-shadow);
    transition: var(--transition);
-
-   &:nth-child(1) {
-      .product("navy");
-   }
-
-   &:nth-child(2) {
-      .product("blue");
-   }
-
-   &:nth-child(3) {
-      .product("aqua");
-   }
-
-   &:nth-child(4) {
-      .product("teal");
-   }
-
+   //background-image: url("../assets/img/pattern-2.png");
+   background-size: cover;
+   
    &:hover {
+      
+      background-blend-mode: hard-light;
+      background-color: var(--productCardBgHover);
 
-      //background-size: 30%;
-
-      a[href] {
-         text-decoration: underline;
-         text-decoration-thickness: 2px;
-      }
+   //    a[href] {
+   //       text-decoration: underline;
+   //       text-decoration-thickness: 2px;
+   //    }
    }
 
 

@@ -39,6 +39,7 @@ import logoWithText from "../assets/img/logo.png";
       backdrop-filter: blur(30px) saturate(150%);
       background-color: var(--surface-main-translucent);
       z-index: 10;
+      height: var(--nav-hight);
    }
    nav-content {
       display: flex;
@@ -73,5 +74,11 @@ import logoWithText from "../assets/img/logo.png";
    img {
       inline-size: ~"clamp(128px, 18vw, 160px)";
       block-size: auto;
+   }
+</style>
+
+<style is:global>
+   :root {
+      --nav-hight: 80px;
    }
 </style>

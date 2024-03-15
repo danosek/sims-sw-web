@@ -2,12 +2,14 @@
 interface Props {
    title: string;
    name: string;
+   url: string;
    desc: string;
    img: string;
    simsEdition: boolean;
+   color: string;
 }
 
-const { title, name, desc, img, simsEdition } = Astro.props;
+const { title, name, url, desc, img, simsEdition, color } = Astro.props;
 import "../styles/spectro-theme.css";
 import "../styles/index.less";
 import "../styles/product.less";
@@ -15,6 +17,12 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import Feature from "../layouts/FeatureCard.astro";
+
+const textGradient = `var(--surface-${color}-minimal)`;
+const headingColor = `var(--text-primary-on-surface-${color}-contrast)`;
+const headerColor = `var(--text-primary-on-surface-${color}-contrast)`;
+const headerBg = `var(--surface-${color}-contrast)`;
+const pattern = `url(\"../assets/img/hero-pattern-${url}.png\")`;
 ---
 
 <!doctype html>
@@ -57,6 +65,5 @@ import Feature from "../layouts/FeatureCard.astro";
    </body>
 </html>
 
-<style lang="less">
-
+<style define:vars={{ textGradient, headingColor, headerColor, headerBg, pattern }}>
 </style>

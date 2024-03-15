@@ -1,20 +1,18 @@
 ---
 import Layout from "../layouts/Product.astro";
 import Nav from "../components/Nav.astro";
-
-const name = "SIMS Mobile";
-const desc =
-   "Mobilní aplikace vytvořena v moderní technologii React Native s využitím pro koncové zákazníky, výjezdové služby, technické a manažerské pracovníky bezpečnostních agentur a pro ovládání výstupů M2M Easy 2 bezpečnostních komunikátorů.";
-const img = "mockup-mobile";
-const simsEdition = true;
+import Feature from "../layouts/FeatureCard.astro";
+import products from "../utils/products";
 ---
 
 <Layout
-   title=`${name} - SIMS SW`
-   name={name}
-   desc={desc}
-   img={img}
-   simsEdition={simsEdition}
+   title=`${products.mobile.name} - SIMS SW`
+   name={products.mobile.name}
+   url={products.mobile.url}
+   desc={products.mobile.desc}
+   img={products.mobile.imgMockup}
+   simsEdition={products.mobile.simsEdition}
+   color={products.mobile.color}
 >
    <p slot="texts">
       Účelem provozu této aplikace je nepřetržitý příjem dat ze zabezpečovacích
@@ -39,23 +37,47 @@ const simsEdition = true;
 
    <h2>Funkce</h2>
    <ul>
-      <li>
-         Zavedení objektů - automatické vytvoření objektu z první příchozí
-         zprávy
-      </li>
-      <li>
-         Monitorované objekty - EZS, PZS, komunikátory, Lokátory (Tracker,
-         GT100, GT101) – zobrazení aktuální polohy na mapě
-      </li>
-      <li>Přiřazení objektů uživatelům a jejich oprávnění</li>
-      <li>Zobrazení zpráv a alarmů (akcí), zprávy z objektu, historie zpráv</li>
-      <li>Správa kontaktů a číselných kódů</li>
-      <li>
-         Správa a ovládání výstupů a zobrazení vstupů (M2M Easy komunikátorů)
-      </li>
-      <li>
-         Periodické testy (autotesty), Časové limity - automatické ukončování s
-         nově příchozím testem
-      </li>
+      <Feature
+         title="Zavedení objektů"
+         desc="Automatické vytvoření objektu z první příchozí zprávy"
+         img="blocks"
+         color="red"
+      />
+      <Feature
+         title="Monitorované objekty"
+         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101)"
+         img="radio"
+         color="pink"
+      />
+      <Feature
+         title="Správa"
+         desc="Přiřazení objektů uživatelům a jejich oprávnění"
+         img="book-user"
+         color="fuchsia"
+      />
+      <Feature
+         title="Alarmy"
+         desc="Zobrazení zpráv a alarmů (akcí), zprávy z objektu, historie zpráv"
+         img="bell-ring"
+         color="deeppurple"
+      />
+      <Feature
+         title="Číselné kódy"
+         desc="Číselné kódy, Zobrazení popisu objektu při akci, zobrazení snímků z kamer"
+         img="scan-eye"
+         color="blue"
+      />
+      <Feature
+         title="Výstupy"
+         desc="Správa a ovládání výstupů a zobrazení vstupů (M2M Easy komunikátorů)"
+         img="circle-arrow-out-up-right"
+         color="aqua"
+      />
+      <Feature
+         title="Periodické testy, Časové limity"
+         desc="Automatické ukončování s nově příchozím testem"
+         img="timer-reset"
+         color="navy"
+      />
    </ul>
 </Layout>

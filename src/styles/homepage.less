@@ -1,0 +1,150 @@
+@import (reference) url(../styles/_includes/_typography.less);
+
+
+html {
+   scroll-padding-block-start: 96px;
+}
+
+about-texts {
+   --about-texts-padding: clamp(2rem, 10vw, 4rem);
+   padding: var(--about-texts-padding) calc(var(--about-texts-padding) * .5);
+   //padding-block-start: ~"calc( var(--nav-hight) + clamp(2rem, 10vw, 4rem))";
+   //margin-block-start: ~"calc( var(--nav-hight) * (-1px))";
+   display: grid;
+   gap: var(--about-texts-padding);
+   grid-template-columns: repeat(auto-fit, minmax(30ch, 50ch));
+   //background-image: linear-gradient(to bottom, transparent, var(--surface-main-variant), transparent);
+   //background-color: var(--surface-base);
+   //background-blend-mode: soft-light;
+   //background-image: url("../assets/img/pattern.png");
+
+   border-end-start-radius: clamp(1rem, 10vw, 4rem);
+   border-end-end-radius: clamp(1rem, 10vw, 4rem);
+   position: relative;
+
+   // &::before {
+   //    position: absolute;
+   //    content: "";
+   //    inset-block-start: 0;
+   //    inset-inline: 0;
+   //    block-size: 1px;
+   //    box-shadow:
+   //       0 2px 8px 0px var(--surface-brand-primary-subtle),
+   //       0 1px 2px 0px var(--surface-brand-primary-strong);
+   //    z-index: 1;
+   //    background-color: var(--surface-brand-primary-strong);
+   // }
+
+   p {
+      .heading-l();
+      font-weight: 600;
+      margin-block: 0;
+      position: relative;
+      overflow: visible;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+      
+      // &::first-letter{
+      //    font-size: 150%;
+      //    font-weight: 1000;
+      //    line-height: normal;
+      //    color: var(--surface-brand-primary-strong);
+      // }
+
+      >span {
+         position: relative;
+         z-index: 1;
+      }
+
+      &::after {
+         z-index: 0;
+         position: absolute;
+         width: 48px;
+         aspect-ratio: 1;
+         inset-block-start: calc( var(--about-texts-padding) * -0.5);
+         inset-inline-start: calc( var(--about-texts-padding) * -0.5);
+         content: "";
+         border-width: .75rem 0 0 .75rem;
+         border-style: solid;
+         border-color: var(--surface-brand-primary-strong);
+         border-start-start-radius: var(--radius-strong);
+
+
+      }
+      &::before {
+         content: "";
+         inset: 20% 60% 30% -10%;
+         filter:blur(60px);
+         z-index: 0;
+         position: absolute;
+         background-size: cover;
+         background-position: center center;
+         background-repeat: repeat;
+         background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CradialGradient id=%22b%22 r=%22100%25%22 cx=%2250%25%22 cy=%2228%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%2373c3ff%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23dbf1ff%22%2F%3E%3C%2FradialGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M714 613q12 113-101 164.5t-223-3Q280 720 151 610t3.5-216.5q132.5-106.5 239-204t228-15q121.5 82.5 101 204T714 613Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M714 613q12 113-101 164.5t-223-3Q280 720 151 610t3.5-216.5q132.5-106.5 239-204t228-15q121.5 82.5 101 204T714 613Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      }
+   }
+
+   hr {
+      height: 100%;
+      margin: 0;
+   }
+}
+
+products {
+   display: grid;
+   gap: 1rem;
+   margin-block-start: 1rem;
+
+   @media screen and (min-width: 720px) {
+      grid-template-rows: auto 1fr;
+      grid-template-columns: repeat(auto-fit,
+            minmax(30ch, 1fr) minmax(30ch, 1fr));
+   }
+}
+
+#about:not(:focus):not(:active) {
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   height: 1px;
+   overflow: hidden;
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
+}
+
+boxes {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem clamp(2rem, 6vw, 4rem);
+}
+
+box {
+
+   &:first-of-type {
+      flex: 1 0 100%;
+      .heading-l();
+   }
+
+   p {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      gap: .5rem
+   }
+}
+
+address {
+   display: flex;
+   flex-direction: column;
+   margin-block-start: .5rem;
+}
+
+cloud-vs-local {
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+
+   h4 {
+      grid-column: ~"1/-1";
+   }
+}

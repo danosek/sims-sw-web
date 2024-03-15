@@ -12,7 +12,7 @@ Primary:   Blue
 Secondary: Green
 
 Neutral Surfaces Chroma
-Intensity: I
+Intensity: III
 Based on:  Blue
 
 Contrast
@@ -2000,42 +2000,42 @@ Level: High (AA)
 :root,
 [data-theme$="light"]:not(:root),
 :is(:root[data-theme$="dark"] [data-theme="inverted"]) {
-    --surface-base: oklch(0.91 0.0051 250);
-    --surface-base-hover: oklch(0.88 0 250);
-    --surface-base-active: oklch(0.87 0 250);
-    --surface-base-disabled: oklch(0.84 0 250);
+    --surface-base: oklch(0.91 0.0154 250);
+    --surface-base-hover: oklch(0.85 0.01 250);
+    --surface-base-active: oklch(0.82 0.01 250);
+    --surface-base-disabled: oklch(0.84 0.01 250);
     --surface-base-variant: oklch(1 0 250);
-    --surface-base-variant-hover: oklch(0.97 0 0);
-    --surface-base-variant-active: oklch(0.95 0 0);
+    --surface-base-variant-hover: oklch(0.93 0 0);
+    --surface-base-variant-active: oklch(0.9 0 0);
     --surface-base-variant-disabled: oklch(0.92 0 0);
-    --surface-main: oklch(0.98 0.0021 250);
-    --surface-main-hover: oklch(0.95 0 250);
-    --surface-main-active: oklch(0.93 0 250);
-    --surface-main-disabled: oklch(0.9 0 250);
-    --surface-main-dim: oklch(0.96 0.0041 250);
-    --surface-main-dim-hover: oklch(0.93 0 250);
-    --surface-main-dim-active: oklch(0.91 0 250);
-    --surface-main-dim-disabled: oklch(0.88 0 250);
-    --surface-main-variant: oklch(0.95 0.0064 250);
-    --surface-main-variant-hover: oklch(0.92 0.01 250);
-    --surface-main-variant-active: oklch(0.9 0.01 250);
-    --surface-main-variant-disabled: oklch(0.87 0.01 250);
-    --surface-main-bright: oklch(1 0.0051 250);
-    --surface-main-bright-hover: oklch(0.97 0 250);
-    --surface-main-bright-active: oklch(0.95 0 250);
-    --surface-main-bright-disabled: oklch(0.92 0 250);
-    --surface-front: oklch(1 0 250);
-    --surface-front-hover: oklch(0.97 0 0);
-    --surface-front-active: oklch(0.95 0 0);
-    --surface-front-disabled: oklch(0.92 0 0);
-    --surface-control: oklch(1 0.0033 250);
-    --surface-control-hover: oklch(0.97 0 250);
-    --surface-control-active: oklch(0.95 0 250);
-    --surface-control-disabled: oklch(0.92 0 250);
-    --surface-control-variant: oklch(1 0.0033 250);
-    --surface-control-variant-hover: oklch(0.97 0 250);
-    --surface-control-variant-active: oklch(0.95 0 250);
-    --surface-control-variant-disabled: oklch(0.92 0 250);
+    --surface-main: oklch(0.98 0.0063 250);
+    --surface-main-hover: oklch(0.91 0.01 250);
+    --surface-main-active: oklch(0.88 0.01 250);
+    --surface-main-disabled: oklch(0.9 0.01 250);
+    --surface-main-dim: oklch(0.96 0.0123 250);
+    --surface-main-dim-hover: oklch(0.9 0.01 250);
+    --surface-main-dim-active: oklch(0.86 0.01 250);
+    --surface-main-dim-disabled: oklch(0.88 0.01 250);
+    --surface-main-variant: oklch(0.95 0.0192 250);
+    --surface-main-variant-hover: oklch(0.89 0.02 250);
+    --surface-main-variant-active: oklch(0.86 0.02 250);
+    --surface-main-variant-disabled: oklch(0.87 0.02 250);
+    --surface-main-bright: oklch(1 0.0123 250);
+    --surface-main-bright-hover: oklch(0.93 0.01 250);
+    --surface-main-bright-active: oklch(0.9 0.01 250);
+    --surface-main-bright-disabled: oklch(0.92 0.01 250);
+    --surface-front: oklch(1 0.0123 250);
+    --surface-front-hover: oklch(0.93 0.01 250);
+    --surface-front-active: oklch(0.9 0.01 250);
+    --surface-front-disabled: oklch(0.92 0.01 250);
+    --surface-control: oklch(1 0.0098 250);
+    --surface-control-hover: oklch(0.93 0.01 250);
+    --surface-control-active: oklch(0.9 0.01 250);
+    --surface-control-disabled: oklch(0.92 0.01 250);
+    --surface-control-variant: oklch(1 0.0098 250);
+    --surface-control-variant-hover: oklch(0.93 0.01 250);
+    --surface-control-variant-active: oklch(0.9 0.01 250);
+    --surface-control-variant-disabled: oklch(0.92 0.01 250);
 }
 
 
@@ -2049,42 +2049,42 @@ Level: High (AA)
 :root[data-theme$="dark"],
 [data-theme$="dark"]:not(:root),
 :is(:root[data-theme$="light"] [data-theme="inverted"]) {
-    --surface-base: oklch(0.04 0.0092 250);
-    --surface-base-hover: oklch(0.16 0 264);
-    --surface-base-active: oklch(0.21 0 264);
-    --surface-base-disabled: oklch(0.24 0 264);
+    --surface-base: oklch(0.04 0.0246 250);
+    --surface-base-hover: oklch(0.16 0 279);
+    --surface-base-active: oklch(0.21 0 279);
+    --surface-base-disabled: oklch(0.24 0 279);
     --surface-base-variant: oklch(0 0 250);
     --surface-base-variant-hover: oklch(0.16 0 0);
     --surface-base-variant-active: oklch(0.21 0 0);
     --surface-base-variant-disabled: oklch(0.24 0 0);
-    --surface-main: oklch(0.24 0.0048 250);
-    --surface-main-hover: oklch(0.26 0 250);
-    --surface-main-active: oklch(0.29 0 250);
-    --surface-main-disabled: oklch(0.32 0 250);
-    --surface-main-dim: oklch(0.2 0.0078 250);
-    --surface-main-dim-hover: oklch(0.23 0.01 251);
-    --surface-main-dim-active: oklch(0.26 0.01 252);
-    --surface-main-dim-disabled: oklch(0.29 0.01 252);
-    --surface-main-variant: oklch(0.32 0.0108 250);
-    --surface-main-variant-hover: oklch(0.34 0.01 250);
-    --surface-main-variant-active: oklch(0.36 0.01 250);
-    --surface-main-variant-disabled: oklch(0.38 0.01 250);
-    --surface-main-bright: oklch(0.28 0.0092 250);
-    --surface-main-bright-hover: oklch(0.3 0.01 250);
-    --surface-main-bright-active: oklch(0.33 0.01 250);
-    --surface-main-bright-disabled: oklch(0.35 0.01 250);
-    --surface-front: oklch(0 0 250);
-    --surface-front-hover: oklch(0.16 0 0);
-    --surface-front-active: oklch(0.21 0 0);
-    --surface-front-disabled: oklch(0.24 0 0);
-    --surface-control: oklch(0.34 0.0067 250);
-    --surface-control-hover: oklch(0.36 0.01 250);
-    --surface-control-active: oklch(0.38 0.01 250);
-    --surface-control-disabled: oklch(0.4 0.01 250);
-    --surface-control-variant: oklch(0.2 0.0067 250);
-    --surface-control-variant-hover: oklch(0.23 0.01 251);
-    --surface-control-variant-active: oklch(0.26 0.01 251);
-    --surface-control-variant-disabled: oklch(0.29 0.01 252);
+    --surface-main: oklch(0.24 0.0128 250);
+    --surface-main-hover: oklch(0.26 0.01 250);
+    --surface-main-active: oklch(0.29 0.01 251);
+    --surface-main-disabled: oklch(0.32 0.01 251);
+    --surface-main-dim: oklch(0.2 0.0209 250);
+    --surface-main-dim-hover: oklch(0.23 0.02 252);
+    --surface-main-dim-active: oklch(0.26 0.02 253);
+    --surface-main-dim-disabled: oklch(0.29 0.02 253);
+    --surface-main-variant: oklch(0.32 0.0289 250);
+    --surface-main-variant-hover: oklch(0.34 0.03 250);
+    --surface-main-variant-active: oklch(0.36 0.02 251);
+    --surface-main-variant-disabled: oklch(0.38 0.02 251);
+    --surface-main-bright: oklch(0.28 0.0209 250);
+    --surface-main-bright-hover: oklch(0.3 0.02 250);
+    --surface-main-bright-active: oklch(0.33 0.02 251);
+    --surface-main-bright-disabled: oklch(0.35 0.02 251);
+    --surface-front: oklch(0.3 0.0209 250);
+    --surface-front-hover: oklch(0.32 0.02 250);
+    --surface-front-active: oklch(0.35 0.02 251);
+    --surface-front-disabled: oklch(0.37 0.02 251);
+    --surface-control: oklch(0.34 0.0177 250);
+    --surface-control-hover: oklch(0.36 0.02 250);
+    --surface-control-active: oklch(0.38 0.02 251);
+    --surface-control-disabled: oklch(0.4 0.01 251);
+    --surface-control-variant: oklch(0.2 0.0177 250);
+    --surface-control-variant-hover: oklch(0.23 0.02 252);
+    --surface-control-variant-active: oklch(0.26 0.01 253);
+    --surface-control-variant-disabled: oklch(0.29 0.01 253);
 }
 
 
@@ -2100,42 +2100,42 @@ Level: High (AA)
 :root,
 [data-theme$="light"]:not(:root),
 :is(:root[data-theme$="dark"] [data-theme="inverted"]) {
-    --surface-base-translucent: oklch(0.91 0.0051 250 / 0.8);
-    --surface-base-translucent-hover: oklch(0.88 0 250 / 0.81);
-    --surface-base-translucent-active: oklch(0.87 0 250 / 0.81);
-    --surface-base-translucent-disabled: oklch(0.84 0 250 / 0.82);
+    --surface-base-translucent: oklch(0.91 0.0154 250 / 0.8);
+    --surface-base-translucent-hover: oklch(0.85 0.01 250 / 0.82);
+    --surface-base-translucent-active: oklch(0.82 0.01 250 / 0.82);
+    --surface-base-translucent-disabled: oklch(0.84 0.01 250 / 0.82);
     --surface-base-variant-translucent: oklch(1 0 250 / 0.8);
-    --surface-base-variant-translucent-hover: oklch(0.97 0 0 / 0.81);
-    --surface-base-variant-translucent-active: oklch(0.95 0 0 / 0.81);
+    --surface-base-variant-translucent-hover: oklch(0.93 0 0 / 0.82);
+    --surface-base-variant-translucent-active: oklch(0.9 0 0 / 0.82);
     --surface-base-variant-translucent-disabled: oklch(0.92 0 0 / 0.82);
-    --surface-main-translucent: oklch(0.98 0.0021 250 / 0.8);
-    --surface-main-translucent-hover: oklch(0.95 0 250 / 0.81);
-    --surface-main-translucent-active: oklch(0.93 0 250 / 0.81);
-    --surface-main-translucent-disabled: oklch(0.9 0 250 / 0.82);
-    --surface-main-dim-translucent: oklch(0.96 0.0041 250 / 0.8);
-    --surface-main-dim-translucent-hover: oklch(0.93 0 250 / 0.81);
-    --surface-main-dim-translucent-active: oklch(0.91 0 250 / 0.81);
-    --surface-main-dim-translucent-disabled: oklch(0.88 0 250 / 0.82);
-    --surface-main-variant-translucent: oklch(0.95 0.0064 250 / 0.8);
-    --surface-main-variant-translucent-hover: oklch(0.92 0.01 250 / 0.81);
-    --surface-main-variant-translucent-active: oklch(0.9 0.01 250 / 0.81);
-    --surface-main-variant-translucent-disabled: oklch(0.87 0.01 250 / 0.82);
-    --surface-main-bright-translucent: oklch(1 0.0051 250 / 0.8);
-    --surface-main-bright-translucent-hover: oklch(0.97 0 250 / 0.81);
-    --surface-main-bright-translucent-active: oklch(0.95 0 250 / 0.81);
-    --surface-main-bright-translucent-disabled: oklch(0.92 0 250 / 0.82);
-    --surface-front-translucent: oklch(1 0 250 / 0.8);
-    --surface-front-translucent-hover: oklch(0.97 0 0 / 0.81);
-    --surface-front-translucent-active: oklch(0.95 0 0 / 0.81);
-    --surface-front-translucent-disabled: oklch(0.92 0 0 / 0.82);
-    --surface-control-translucent: oklch(1 0.0033 250 / 0.8);
-    --surface-control-translucent-hover: oklch(0.97 0 250 / 0.81);
-    --surface-control-translucent-active: oklch(0.95 0 250 / 0.81);
-    --surface-control-translucent-disabled: oklch(0.92 0 250 / 0.82);
-    --surface-control-variant-translucent: oklch(1 0.0033 250 / 0.8);
-    --surface-control-variant-translucent-hover: oklch(0.97 0 250 / 0.81);
-    --surface-control-variant-translucent-active: oklch(0.95 0 250 / 0.81);
-    --surface-control-variant-translucent-disabled: oklch(0.92 0 250 / 0.82);
+    --surface-main-translucent: oklch(0.98 0.0063 250 / 0.8);
+    --surface-main-translucent-hover: oklch(0.91 0.01 250 / 0.82);
+    --surface-main-translucent-active: oklch(0.88 0.01 250 / 0.82);
+    --surface-main-translucent-disabled: oklch(0.9 0.01 250 / 0.82);
+    --surface-main-dim-translucent: oklch(0.96 0.0123 250 / 0.8);
+    --surface-main-dim-translucent-hover: oklch(0.9 0.01 250 / 0.82);
+    --surface-main-dim-translucent-active: oklch(0.86 0.01 250 / 0.82);
+    --surface-main-dim-translucent-disabled: oklch(0.88 0.01 250 / 0.82);
+    --surface-main-variant-translucent: oklch(0.95 0.0192 250 / 0.8);
+    --surface-main-variant-translucent-hover: oklch(0.89 0.02 250 / 0.82);
+    --surface-main-variant-translucent-active: oklch(0.86 0.02 250 / 0.82);
+    --surface-main-variant-translucent-disabled: oklch(0.87 0.02 250 / 0.82);
+    --surface-main-bright-translucent: oklch(1 0.0123 250 / 0.8);
+    --surface-main-bright-translucent-hover: oklch(0.93 0.01 250 / 0.82);
+    --surface-main-bright-translucent-active: oklch(0.9 0.01 250 / 0.82);
+    --surface-main-bright-translucent-disabled: oklch(0.92 0.01 250 / 0.82);
+    --surface-front-translucent: oklch(1 0.0123 250 / 0.8);
+    --surface-front-translucent-hover: oklch(0.93 0.01 250 / 0.82);
+    --surface-front-translucent-active: oklch(0.9 0.01 250 / 0.82);
+    --surface-front-translucent-disabled: oklch(0.92 0.01 250 / 0.82);
+    --surface-control-translucent: oklch(1 0.0098 250 / 0.8);
+    --surface-control-translucent-hover: oklch(0.93 0.01 250 / 0.82);
+    --surface-control-translucent-active: oklch(0.9 0.01 250 / 0.82);
+    --surface-control-translucent-disabled: oklch(0.92 0.01 250 / 0.82);
+    --surface-control-variant-translucent: oklch(1 0.0098 250 / 0.8);
+    --surface-control-variant-translucent-hover: oklch(0.93 0.01 250 / 0.82);
+    --surface-control-variant-translucent-active: oklch(0.9 0.01 250 / 0.82);
+    --surface-control-variant-translucent-disabled: oklch(0.92 0.01 250 / 0.82);
 }
 
 
@@ -2149,47 +2149,48 @@ Level: High (AA)
 :root[data-theme$="dark"],
 [data-theme$="dark"]:not(:root),
 :is(:root[data-theme$="light"] [data-theme="inverted"]) {
-    --surface-base-translucent: oklch(0.04 0.0092 250 / 0.8);
-    --surface-base-translucent-hover: oklch(0.16 0 264 / 0.81);
-    --surface-base-translucent-active: oklch(0.21 0 264 / 0.83);
-    --surface-base-translucent-disabled: oklch(0.24 0 264 / 0.84);
+    --surface-base-translucent: oklch(0.04 0.0246 250 / 0.8);
+    --surface-base-translucent-hover: oklch(0.16 0 279 / 0.81);
+    --surface-base-translucent-active: oklch(0.21 0 279 / 0.83);
+    --surface-base-translucent-disabled: oklch(0.24 0 279 / 0.84);
     --surface-base-variant-translucent: oklch(0 0 250 / 0.8);
     --surface-base-variant-translucent-hover: oklch(0.16 0 0 / 0.81);
     --surface-base-variant-translucent-active: oklch(0.21 0 0 / 0.83);
     --surface-base-variant-translucent-disabled: oklch(0.24 0 0 / 0.84);
-    --surface-main-translucent: oklch(0.24 0.0048 250 / 0.8);
-    --surface-main-translucent-hover: oklch(0.26 0 250 / 0.81);
-    --surface-main-translucent-active: oklch(0.29 0 250 / 0.83);
-    --surface-main-translucent-disabled: oklch(0.32 0 250 / 0.84);
-    --surface-main-dim-translucent: oklch(0.2 0.0078 250 / 0.8);
-    --surface-main-dim-translucent-hover: oklch(0.23 0.01 251 / 0.81);
-    --surface-main-dim-translucent-active: oklch(0.26 0.01 252 / 0.83);
-    --surface-main-dim-translucent-disabled: oklch(0.29 0.01 252 / 0.84);
-    --surface-main-variant-translucent: oklch(0.32 0.0108 250 / 0.8);
-    --surface-main-variant-translucent-hover: oklch(0.34 0.01 250 / 0.81);
-    --surface-main-variant-translucent-active: oklch(0.36 0.01 250 / 0.83);
-    --surface-main-variant-translucent-disabled: oklch(0.38 0.01 250 / 0.84);
-    --surface-main-bright-translucent: oklch(0.28 0.0092 250 / 0.8);
-    --surface-main-bright-translucent-hover: oklch(0.3 0.01 250 / 0.81);
-    --surface-main-bright-translucent-active: oklch(0.33 0.01 250 / 0.83);
-    --surface-main-bright-translucent-disabled: oklch(0.35 0.01 250 / 0.84);
-    --surface-front-translucent: oklch(0 0 250 / 0.8);
-    --surface-front-translucent-hover: oklch(0.16 0 0 / 0.81);
-    --surface-front-translucent-active: oklch(0.21 0 0 / 0.83);
-    --surface-front-translucent-disabled: oklch(0.24 0 0 / 0.84);
-    --surface-control-translucent: oklch(0.34 0.0067 250 / 0.8);
-    --surface-control-translucent-hover: oklch(0.36 0.01 250 / 0.81);
-    --surface-control-translucent-active: oklch(0.38 0.01 250 / 0.83);
-    --surface-control-translucent-disabled: oklch(0.4 0.01 250 / 0.84);
-    --surface-control-variant-translucent: oklch(0.2 0.0067 250 / 0.8);
-    --surface-control-variant-translucent-hover: oklch(0.23 0.01 251 / 0.81);
-    --surface-control-variant-translucent-active: oklch(0.26 0.01 251 / 0.83);
-    --surface-control-variant-translucent-disabled: oklch(0.29 0.01 252 / 0.84);
+    --surface-main-translucent: oklch(0.24 0.0128 250 / 0.8);
+    --surface-main-translucent-hover: oklch(0.26 0.01 250 / 0.81);
+    --surface-main-translucent-active: oklch(0.29 0.01 251 / 0.83);
+    --surface-main-translucent-disabled: oklch(0.32 0.01 251 / 0.84);
+    --surface-main-dim-translucent: oklch(0.2 0.0209 250 / 0.8);
+    --surface-main-dim-translucent-hover: oklch(0.23 0.02 252 / 0.81);
+    --surface-main-dim-translucent-active: oklch(0.26 0.02 253 / 0.83);
+    --surface-main-dim-translucent-disabled: oklch(0.29 0.02 253 / 0.84);
+    --surface-main-variant-translucent: oklch(0.32 0.0289 250 / 0.8);
+    --surface-main-variant-translucent-hover: oklch(0.34 0.03 250 / 0.81);
+    --surface-main-variant-translucent-active: oklch(0.36 0.02 251 / 0.83);
+    --surface-main-variant-translucent-disabled: oklch(0.38 0.02 251 / 0.84);
+    --surface-main-bright-translucent: oklch(0.28 0.0209 250 / 0.8);
+    --surface-main-bright-translucent-hover: oklch(0.3 0.02 250 / 0.81);
+    --surface-main-bright-translucent-active: oklch(0.33 0.02 251 / 0.83);
+    --surface-main-bright-translucent-disabled: oklch(0.35 0.02 251 / 0.84);
+    --surface-front-translucent: oklch(0.3 0.0209 250 / 0.8);
+    --surface-front-translucent-hover: oklch(0.32 0.02 250 / 0.81);
+    --surface-front-translucent-active: oklch(0.35 0.02 251 / 0.83);
+    --surface-front-translucent-disabled: oklch(0.37 0.02 251 / 0.84);
+    --surface-control-translucent: oklch(0.34 0.0177 250 / 0.8);
+    --surface-control-translucent-hover: oklch(0.36 0.02 250 / 0.81);
+    --surface-control-translucent-active: oklch(0.38 0.02 251 / 0.83);
+    --surface-control-translucent-disabled: oklch(0.4 0.01 251 / 0.84);
+    --surface-control-variant-translucent: oklch(0.2 0.0177 250 / 0.8);
+    --surface-control-variant-translucent-hover: oklch(0.23 0.02 252 / 0.81);
+    --surface-control-variant-translucent-active: oklch(0.26 0.01 253 / 0.83);
+    --surface-control-variant-translucent-disabled: oklch(0.29 0.01 253 / 0.84);
 }
 
 /* Brand Surfaces */
 
-:root {
+:root,
+[data-theme]:not(:root) {
     --surface-brand-primary-minimal: var(--surface-blue-minimal);
     --surface-brand-primary-minimal-hover: var(--surface-blue-minimal-hover);
     --surface-brand-primary-minimal-active: var(--surface-blue-minimal-active);
@@ -2266,7 +2267,8 @@ Level: High (AA)
 
 /* Status Surfaces */
 
-:root {
+:root,
+[data-theme]:not(:root) {
     --surface-status-error-minimal: var(--surface-red-minimal);
     --surface-status-error-minimal-hover: var(--surface-red-minimal-hover);
     --surface-status-error-minimal-active: var(--surface-red-minimal-active);
@@ -2415,7 +2417,8 @@ Level: High (AA)
 
 /* Rights Surfaces */
 
-:root {
+:root,
+[data-theme]:not(:root) {
     --surface-rights-required-minimal: var(--surface-yellow-minimal);
     --surface-rights-required-minimal-hover: var(--surface-yellow-minimal-hover);
     --surface-rights-required-minimal-active: var(--surface-yellow-minimal-active);
@@ -2593,44 +2596,44 @@ Level: High (AA)
 :root,
 [data-theme$="light"]:not(:root),
 :is(:root[data-theme$="dark"] [data-theme="inverted"]) {
-    --text-red: oklch(0.5 0.22 28);
-    --text-red-variant: oklch(0.6 0.22 28);
+    --text-red: oklch(0.51 0.22 28);
+    --text-red-variant: oklch(0.61 0.22 28);
     --text-pink: oklch(0.51 0.22 0);
-    --text-pink-variant: oklch(0.6 0.22 0);
-    --text-fuchsia: oklch(0.5 0.2 325);
-    --text-fuchsia-variant: oklch(0.6 0.2 325);
+    --text-pink-variant: oklch(0.61 0.22 0);
+    --text-fuchsia: oklch(0.51 0.2 325);
+    --text-fuchsia-variant: oklch(0.61 0.2 325);
     --text-deeppurple: oklch(0.5 0.19 298);
-    --text-deeppurple-variant: oklch(0.59 0.19 298);
+    --text-deeppurple-variant: oklch(0.6 0.19 298);
     --text-navy: oklch(0.4 0.16 266);
     --text-navy-variant: oklch(0.55 0.16 266);
-    --text-blue: oklch(0.48 0.2 250);
+    --text-blue: oklch(0.49 0.2 250);
     --text-blue-variant: oklch(0.58 0.2 250);
-    --text-lightblue: oklch(0.47 0.19 230);
+    --text-lightblue: oklch(0.48 0.19 230);
     --text-lightblue-variant: oklch(0.57 0.19 230);
-    --text-aqua: oklch(0.46 0.18 205);
+    --text-aqua: oklch(0.47 0.18 205);
     --text-aqua-variant: oklch(0.56 0.18 205);
-    --text-teal: oklch(0.46 0.12 175);
-    --text-teal-variant: oklch(0.56 0.12 175);
+    --text-teal: oklch(0.47 0.12 175);
+    --text-teal-variant: oklch(0.57 0.12 175);
     --text-green: oklch(0.46 0.22 146);
-    --text-green-variant: oklch(0.55 0.22 146);
-    --text-lightgreen: oklch(0.46 0.17 135);
-    --text-lightgreen-variant: oklch(0.56 0.17 135);
-    --text-lime: oklch(0.47 0.16 128);
-    --text-lime-variant: oklch(0.56 0.16 128);
-    --text-yellow: oklch(0.48 0.18 99);
-    --text-yellow-variant: oklch(0.57 0.18 99);
-    --text-amber: oklch(0.48 0.17 82);
-    --text-amber-variant: oklch(0.58 0.17 82);
-    --text-orange: oklch(0.49 0.16 62);
+    --text-green-variant: oklch(0.56 0.22 146);
+    --text-lightgreen: oklch(0.47 0.17 135);
+    --text-lightgreen-variant: oklch(0.57 0.17 135);
+    --text-lime: oklch(0.48 0.16 128);
+    --text-lime-variant: oklch(0.57 0.16 128);
+    --text-yellow: oklch(0.49 0.18 99);
+    --text-yellow-variant: oklch(0.58 0.18 99);
+    --text-amber: oklch(0.49 0.17 82);
+    --text-amber-variant: oklch(0.59 0.17 82);
+    --text-orange: oklch(0.5 0.16 62);
     --text-orange-variant: oklch(0.59 0.16 62);
-    --text-deeporange: oklch(0.5 0.22 45);
-    --text-deeporange-variant: oklch(0.6 0.22 45);
+    --text-deeporange: oklch(0.51 0.22 45);
+    --text-deeporange-variant: oklch(0.61 0.22 45);
     --text-brown: oklch(0.42 0.07 50);
     --text-brown-variant: oklch(0.57 0.07 50);
     --text-gray: oklch(0.45 0 0);
-    --text-gray-variant: oklch(0.57 0 0);
-    --text-silver: oklch(0.48 0 0);
-    --text-silver-variant: oklch(0.57 0 0);
+    --text-gray-variant: oklch(0.58 0 0);
+    --text-silver: oklch(0.49 0 0);
+    --text-silver-variant: oklch(0.58 0 0);
     --text-black: oklch(0.01 0 0);
     --text-black-variant: oklch(0.16 0 0);
 }
@@ -2687,10 +2690,10 @@ Level: High (AA)
 :is(:root[data-theme$="dark"] [data-theme="inverted"]) {
     --text-primary: oklch(0.02 0 250);
     --text-primary-variant: oklch(0.35 0 250);
-    --text-secondary: oklch(0.48 0 250);
+    --text-secondary: oklch(0.49 0 250);
     --text-secondary-variant: oklch(0.6 0 250);
-    --text-disabled: oklch(0.68 0 250);
-    --text-disabled-variant: oklch(0.68 0 250);
+    --text-disabled: oklch(0.69 0 250);
+    --text-disabled-variant: oklch(0.69 0 250);
 }
 
 :root[data-theme$="dark"],
@@ -2706,7 +2709,8 @@ Level: High (AA)
 
 /* Brand Text Colors */
 
-:root {
+:root,
+[data-theme]:not(:root) {
     --text-brand-primary: var(--text-blue);
     --text-brand-primary-variant: var(--text-blue-variant);
     --text-brand-secondary: var(--text-green);
@@ -2715,7 +2719,8 @@ Level: High (AA)
 
 /* Status Text Colors */
 
-:root {
+:root,
+[data-theme]:not(:root) {
     --text-status-error: var(--text-red);
     --text-status-error-variant: var(--text-red-variant);
     --text-status-warning: var(--text-amber);
@@ -2728,7 +2733,8 @@ Level: High (AA)
 
 /* Rights Text Colors */
 
-:root {
+:root,
+[data-theme]:not(:root) {
     --text-rights-required: var(--text-yellow);
     --text-rights-required-variant: var(--text-yellow-variant);
     --text-rights-postponed-required: var(--text-orange);

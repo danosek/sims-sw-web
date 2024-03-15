@@ -4,12 +4,17 @@ interface Props {
    url: string;
    desc: string;
    img: string;
+   color: string;
 }
 
-const { name, url, desc, img } = Astro.props;
+const { name, url, desc, img, color } = Astro.props;
 import "../styles/product-card.less";
 import { Image } from "astro:assets";
 const bgUrl = `url(\"../assets/img/${img}.svg\")`;
+const productCardBg = `var(--surface-${color}-contrast)`;
+const productCardBgHover = `var(--surface-${color}-contrast-hover)`;
+const productCardColor = `var(--text-primary-on-surface-${color}-contrast)`;
+const pattern = `url(\"../assets/img/pattern-${url}.png\")`;
 ---
 
 <product>
@@ -23,6 +28,5 @@ const bgUrl = `url(\"../assets/img/${img}.svg\")`;
 </product>
 
 
-<style define:vars={{ bgUrl }}>
-   background-image: var(--bgUrl);
+<style define:vars={{ bgUrl, productCardBg, productCardBgHover, productCardColor, pattern }}>
 </style>

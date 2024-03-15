@@ -20,10 +20,38 @@
 </script>
 
 <footer>
-   <p>
-      <a href="principles.html">Principles of personal data processing</a>
-   </p>
-   <p>
-      <span id="copyright"></span><span>&ensp;© SW SIMS safety s.r.o</span>
-   </p>
+   <footer-content>
+      <p>
+         <a href="principles.html">Principles of personal data processing</a>
+      </p>
+      <p>
+         <span id="copyright"></span><span>&ensp;© SW SIMS safety s.r.o</span>
+      </p>
+   </footer-content>
 </footer>
+
+<style>
+   footer {
+      padding-block-start: clamp(4rem, 10vw, 8rem);
+      color: var(--text-secondary);
+   }
+   footer-content {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
+      margin-inline: auto;
+      padding: clamp(1rem, 10vw, 2rem);
+      background-color: var(--surface-main-dim);
+      border-start-start-radius: clamp(1rem, 10vw, 2rem);
+      border-start-end-radius: clamp(1rem, 10vw, 2rem);
+   }
+
+   p {
+      margin: 0;
+   }
+
+   a {
+      color: inherit
+   }
+</style>

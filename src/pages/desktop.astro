@@ -2,20 +2,17 @@
 import Layout from "../layouts/Product.astro";
 import Nav from "../components/Nav.astro";
 import Feature from "../layouts/FeatureCard.astro";
-
-const name = "SIMS Desktop";
-const desc =
-   "Komplexní systém pro bezpečnostní agentury připojující na PCO (pult centrální ochrany) libovolný počet střežených objektů.";
-const img = "mockup-server";
-const simsEdition = true;
+import products from "../utils/products"
 ---
 
 <Layout
-   title=`${name} - SIMS SW`
-   name={name}
-   desc={desc}
-   img={img}
-   simsEdition={simsEdition}
+   title=`${products.desktop.name} - SIMS SW`
+   name={products.desktop.name}
+   url={products.desktop.url}
+   desc={products.desktop.desc}
+   img={products.desktop.imgMockup}
+   simsEdition={products.desktop.simsEdition}
+   color={products.desktop.color}
 >
    <p slot="texts">
       Účelem provozu tohoto produktu je nepřetržitý příjem dat ze
@@ -30,8 +27,11 @@ const simsEdition = true;
       pro operační systémy Windows všech verzí. Je to intuitivní aplikace
       vyvíjena na míru potřebám našich zákazníků (bezpečnostních agentur).
       Propracovaný systém disponuje množstvím funkcionalit, které usnadňují
-      práci operátorům, technikům ale i vedoucím pracovníkům. Přijaté zprávy se
-      třídí dle jejich významu na úrovni databáze, stejně jako automatické
+      práci operátorům, technikům ale i vedoucím pracovníkům.
+   </p>
+
+   <p slot="texts">
+      Přijaté zprávy se třídí dle jejich významu na úrovni databáze, stejně jako automatické
       ukončování limitů a dalších automatik, které napomáhají operátorům k
       rychlému odbavení alarmů. Díky tomu jediný operátor dokáže bez problému
       hlídat tisíce střežených objektů. Náš systém je vyvíjen na základě podnětů
@@ -46,67 +46,79 @@ const simsEdition = true;
       <Feature
          title="Zavedení objektů"
          desc="Automatické vytvoření objektu z první příchozí zprávy"
-         img="radio"
+         img="blocks"
          color="red"
       />
       <Feature
          title="Monitorované objekty"
-         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101) – zobrazení aktuální a historcké polohy na mapě, Geo zóny, RFID kódy – obchůzky"
-         img="computer"
+         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101)"
+         img="radio"
+         color="pink"
+      />
+      <Feature
+         title="RFID kódy"
+         desc="Idelání pro kontrolu na obchůzce"
+         img="cpu"
+         color="pink"
+      />
+      <Feature
+         title="Zobrazení objektů na mapě"
+         desc="Real-time a historie"
+         img="map-pinned"
          color="pink"
       />
       <Feature
          title="Správa"
          desc="Správa objektů, kontaktů, adres, uživatelů a jejich oprávnění"
-         img="computer"
+         img="book-user"
          color="fuchsia"
       />
       <Feature
          title="Alarmy"
          desc="Alarmy (akce) tříděné dle významu, Obsluha alarmů, Vyřízené akce"
-         img="computer"
+         img="bell-ring"
          color="deeppurple"
       />
       <Feature
          title="Periodické testy, Časové limity"
          desc="Automatické ukončování s nově příchozím testem"
-         img="computer"
+         img="timer-reset"
          color="navy"
       />
       <Feature
          title="Číselné kódy"
          desc="Číselné kódy, Zobrazení popisu objektu při akci, zobrazení snímků z kamer"
-         img="computer"
+         img="scan-eye"
          color="blue"
       />
       <Feature
          title="Zprávy"
          desc="Zprávy, Zprávy z objektu, historie zpráv"
-         img="computer"
+         img="square-stack"
          color="lightblue"
       />
       <Feature
          title="Hovory"
          desc="Vytáčení a přijímání hovorů a zaznamenávání jejich průběhů"
-         img="computer"
+         img="phone-call"
          color="aqua"
       />
       <Feature
          title="Události"
          desc="Události, Otevírací doby, Limity, Obnovy událostí"
-         img="computer"
+         img="siren"
          color="teal"
       />
       <Feature
          title="SMS"
          desc="SMS, Emaily, Události SMS"
-         img="computer"
+         img="message-circle-more"
          color="green"
       />
       <Feature
          title="Plánovač"
          desc="Plánovač, Karta objektu, Výjezdové služby"
-         img="computer"
+         img="calendar-range"
          color="lightgreen"
       />
    </ul>

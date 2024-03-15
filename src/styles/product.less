@@ -1,28 +1,51 @@
+@import (reference) url(../styles/_includes/_typography.less);
+
 header {
    display: grid;
-   margin-block-start: clamp(2rem, 10vw, 6rem);
-   grid-template-columns: minmax(0, 50ch) 1fr;
+   margin-block-start: 1rem;
+   grid-template-columns: 40ch 1fr;
    gap: clamp(1rem, 10vw, 2rem);
    grid-template-areas: "title ." "text ." "image image";
-}
-@media screen and (min-width: 110ch) {
-   header {
-      gap: clamp(1rem, 10vw, 3rem) clamp(1rem, 10vw, 6rem);
-      grid-template-columns: 38ch 1fr;
-      grid-template-areas: "title image" "text image";
-      grid-template-rows: min-content 1fr;
+   padding: clamp(1rem, 10vw, 6rem);
+   background-color: var(--headerBg);
+   border-radius: clamp(1rem, 10vw, 2rem);
+   background-image: var(--pattern);
+   background-size: cover;
+   background-blend-mode: luminosity;
+
+
+   @media screen and (width > 110ch) {
+      & {
+         gap: clamp(1rem, 10vw, 3rem) 5ch;
+         grid-template-columns: 38ch 1fr;
+         grid-template-areas: "title image" "text image";
+         grid-template-rows: min-content 1fr;
+      }
+   
    }
 }
+
 h1 {
    grid-area: title;
    margin: 0;
+   color: var(--headingColor);
 }
 img {
    grid-area: image;
-   max-inline-size: 100%;
-   block-size: auto;
    justify-self: center;
+   align-self: center;
+   block-size: auto;
+   max-inline-size: 100%;
+
+   @media screen and (min-width: 110ch) {
+      & {
+         inline-size: auto;
+         max-block-size: 500px;
+      }
+   
+   }
 }
+
 
 h1 + p {
    grid-area: text;
@@ -30,26 +53,30 @@ h1 + p {
    font-weight: var(--text-weight);
    line-height: 1.5;
    margin: 0;
+   color: var(--headerColor);
+   .heading-l();
 }
 
 product-texts {
    display: grid;
-   grid-auto-flow: column;
-   grid-auto-columns: 40ch;
+   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
    gap: 2em;
+   //padding-block: 2em;
+   margin-block: 2em;
+   //background-image: linear-gradient(to left, transparent, var(--surface-main-variant), transparent) ;
+   //border-block: 1px solid var(--border);
 }
 
 product-texts p {
-   display: inline-flex;
-   //font-size: var(--font-size-m);
+   //font-size: var(--font-size-l);
    line-height: 1.5;
    //margin-inline-start: 15%;
 
-   padding: 2rem;
-   border-radius: var(--radius-strong);
-   background-color: var(--surface-main-bright);
-   border: 1px solid var(--surface-brand-secondary-strong);
-   box-shadow: 0 4px 8px -2px var(--surface-brand-secondary-subtle);
+   // padding: 2rem;
+   // border-radius: var(--radius-strong);
+   // background-color: var(--surface-main-bright);
+   // border: 1px solid var(--surface-brand-secondary-strong);
+   // box-shadow: 0 4px 8px -2px var(--surface-brand-secondary-subtle);
 
    // &:nth-of-type(2n) {
    //    margin-inline-start: 30%;
@@ -66,12 +93,28 @@ ul {
    display: grid;
    gap: 1rem;
    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr) );
-   grid-auto-rows: 1fr;
+   grid-auto-rows: .33fr;
 }
 
-// li {
-//    line-height: 1.5;
-// }
+li {
+   grid-row-end: span 3;
+}
+
+li:nth-child(1) {
+   grid-row-start: 1;
+}
+
+li:nth-child(2) {
+   grid-row-start: 2;
+}
+
+li:nth-child(3) {
+   grid-row-start: 1;
+}
+
+li:nth-child(4) {
+   grid-row-start: 3;
+}
 
 // li::before {
 //    content: "●";

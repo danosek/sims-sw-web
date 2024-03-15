@@ -1,45 +1,77 @@
 ---
 import Layout from "../layouts/Product.astro";
 import Nav from "../components/Nav.astro";
+import Feature from "../layouts/FeatureCard.astro";
 
-const name = "SIMS Web";
-const desc =
-   "Jednoduchá intuitivní webová aplikace vhodná například pro správce budov, vrátnice, výjezdové služby nebo pro koncové zákazníky.";
-const img = "mockup-web";
-const simsEdition = true;
+import products from "../utils/products";
 ---
 
 <Layout
-   title=`${name} - SIMS SW`
-   name={name}
-   desc={desc}
-   img={img}
-   simsEdition={simsEdition}
+   title=`${products.web.name} - SIMS SW`
+   name={products.web.name}
+   url={products.web.url}
+   desc={products.web.desc}
+   img={products.web.imgMockup}
+   simsEdition={products.web.simsEdition}
+   color={products.web.color}
 >
    <p slot="texts">
-      Účelem provozu tohoto produktu je nepřetržitý příjem dat ze zabezpečovacích zařízení monitorující střežené objekty a zobrazení těchto dat zákazníkovi formou srozumitelných zpráv a alarmů za účelem nejrychlejšího odbavení.
+      Účelem provozu tohoto produktu je nepřetržitý příjem dat ze
+      zabezpečovacích zařízení monitorující střežené objekty a zobrazení těchto
+      dat zákazníkovi formou srozumitelných zpráv a alarmů za účelem
+      nejrychlejšího odbavení.
    </p>
 
    <p slot="texts">
-      Aplikace je vyvíjena v technologii Microsoft ASP.NET a běží ve všech podporovaných verzí webových prohlížečů jako například Edge, Chrome, Firefox a další.
+      Aplikace je vyvíjena v technologii Microsoft ASP.NET a běží ve všech
+      podporovaných verzí webových prohlížečů jako například Edge, Chrome,
+      Firefox a další.
    </p>
 
    <h2>Funkce</h2>
 
    <ul>
-      <li>Funkce</li>
-      <li>
-         Zavedení objektů - automatické vytvoření objektu z první příchozí
-         zprávy
-      </li>
-      <li>
-         Monitorované objekty - EZS, PZS, komunikátory, Lokátory (Tracker,
-         GT100, GT101) – zobrazení aktuální a historcké polohy na mapě, Geo
-         zóny, RFID kódy – obchůzky
-      </li>
-      <li>Správa objektů, kontaktů, číselných kódů</li>
-      <li>Alarmy (akce) tříděné dle významu, Obsluha alarmů</li>
-      <li>Časové limity - automatické ukončování</li>
-      <li>Zprávy, Zprávy z objektů, historie zpráv</li>
+      <Feature
+         title="Zavedení objektů"
+         desc="Automatické vytvoření objektu z první příchozí zprávy"
+         img="blocks"
+         color="red"
+      />
+      <Feature
+         title="Monitorované objekty"
+         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101)"
+         img="radio"
+         color="pink"
+      />
+      <Feature
+         title="RFID kódy"
+         desc="Idelání pro kontrolu na obchůzce"
+         img="cpu"
+         color="pink"
+      />
+      <Feature
+         title="Správa"
+         desc="Správa objektů, kontaktů, adres, uživatelů a jejich oprávnění"
+         img="book-user"
+         color="fuchsia"
+      />
+      <Feature
+         title="Alarmy"
+         desc="Alarmy (akce) tříděné dle významu, Obsluha alarmů, Vyřízené akce"
+         img="bell-ring"
+         color="deeppurple"
+      />
+      <Feature
+         title="Časové limity"
+         desc="Automatické ukončování"
+         img="timer-reset"
+         color="navy"
+      />
+      <Feature
+         title="Zprávy"
+         desc="Zprávy, Zprávy z objektu, historie zpráv"
+         img="square-stack"
+         color="lightblue"
+      />
    </ul>
 </Layout>

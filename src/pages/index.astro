@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Index.astro";
 import Product from "../layouts/ProductCard.astro";
+import products from "../utils/products";
 ---
 
 <Layout title="SIMS SW">
@@ -10,16 +11,19 @@ import Product from "../layouts/ProductCard.astro";
       <h2 id="about">O nás</h2>
       <about-texts>
          <p>
-            Jsme česká firma, která se od roku 1991 zabývá vývojem komunikačních
-            služeb a informačních systémů pro monitorování elektronických
-            bezpečnostních zařízení.
+            <span>
+               Jsme česká firma, která se od roku 1991 zabývá vývojem
+               komunikačních služeb a informačních systémů pro monitorování
+               elektronických bezpečnostních zařízení.
+            </span>
          </p>
-         <hr>
          <p>
-            Základem našeho software je nepřetržitý příjem dat ze
-            zabezpečovacích zařízení monitorující střežené objekty. Pomocí
-            produktů SIMS vyhodnocujeme a zobrazujeme tato data ve formě zpráv
-            našim zákazníkům v reálném čase.
+            <span>
+               Základem našeho software je nepřetržitý příjem dat ze
+               zabezpečovacích zařízení monitorující střežené objekty. Pomocí
+               produktů SIMS vyhodnocujeme a zobrazujeme tato data ve formě
+               zpráv našim zákazníkům v reálném čase.
+            </span>
          </p>
       </about-texts>
 
@@ -28,30 +32,35 @@ import Product from "../layouts/ProductCard.astro";
       <h2 id="products">Produkty</h2>
       <products>
          <Product
-            name="SIMS Desktop"
-            url="desktop"
-            img="computer"
-            desc="Komplexní systém pro bezpečnostní agentury připojující na PCO (pult centrální ochrany) libovolný počet střežených objektů."
+            name={products.desktop.name}
+            url={products.desktop.url}
+            img={products.desktop.img}
+            desc={products.desktop.desc}
+            color={products.desktop.color}
          />
          <Product
-            name="SIMS Web"
-            url="web"
-            img="app-window-mac"
-            desc="Jednoduchá intuitivní webová aplikace vhodná například pro správce budov, vrátnice, výjezdové služby nebo pro koncové zákazníky."
+            name={products.web.name}
+            url={products.web.url}
+            img={products.web.img}
+            desc={products.web.desc}
+            color={products.web.color}
          />
          <Product
-            name="SIMS Mobile"
-            url="mobile"
-            img="smartphone"
-            desc="Mobilní aplikace vytvořena v moderní technologii React Native s využitím pro koncové zákazníky, výjezdové služby, technické a manažerské pracovníky bezpečnostních agentur a pro ovládání výstupů M2M Easy 2 bezpečnostních komunikátorů."
+            name={products.mobile.name}
+            url={products.mobile.url}
+            img={products.mobile.img}
+            desc={products.mobile.desc}
+            color={products.mobile.color}
          />
          <Product
-            name="Eniterm"
-            url="eniterm"
-            img="radio"
-            desc="Aplikace Eniterm disponuje ovladači všech nejčastěji používaných bezpečnostních systémů, komunikátorů a lokátorů. Na základě toho jsme schopni přijímat data ze zařízení téměř všech výrobců."
+            name={products.eniterm.name}
+            url={products.eniterm.url}
+            img={products.eniterm.img}
+            desc={products.eniterm.desc}
+            color={products.eniterm.color}
          />
       </products>
+
       <product-comparison>
          <!--p Porovnejte funkčnost všech edicí a zjistěte, která je pro vás ta pravá.-->
          <a href="/comparison/">Porovnat</a>
@@ -113,44 +122,5 @@ import Product from "../layouts/ProductCard.astro";
 </Layout>
 
 <style lang="less">
-   html {
-      scroll-padding-block-start: 96px;
-   }
-   about-texts {
-      display: grid;
-      gap: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(30ch, 40ch) 1px minmax(30ch, 40ch));
-
-      p {
-         margin-block: 0;
-      }
-
-      hr {
-         height: 100%;
-         margin: 0;
-      }
-   }
-   products {
-      display: grid;
-      gap: 1rem;
-      margin-block-start: 1rem;
-
-      @media screen and (min-width: 720px) {
-         grid-template-rows: auto 1fr;
-         grid-template-columns: repeat(
-            auto-fit,
-            minmax(30ch, 1fr) minmax(30ch, 1fr)
-         );
-      }
-   }
-
-   #about:not(:focus):not(:active) {
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-   }
+   @import "../styles/homepage.less";
 </style>
