@@ -3,9 +3,9 @@
 header {
    display: grid;
    margin-block-start: 1rem;
-   grid-template-columns: 40ch 1fr;
+   grid-template-columns: 1fr;
    gap: clamp(1rem, 10vw, 2rem);
-   grid-template-areas: "title ." "text ." "image image";
+   grid-template-areas: "title" "text" "image";
    padding: clamp(1rem, 10vw, 6rem);
    background-color: var(--headerBg);
    border-radius: clamp(1rem, 10vw, 2rem);
@@ -93,28 +93,28 @@ ul {
    display: grid;
    gap: 1rem;
    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr) );
-   grid-auto-rows: .33fr;
+   grid-auto-rows: 1fr;
 }
 
-li {
-   grid-row-end: span 3;
-}
+// li {
+//    grid-row-end: span 3;
+// }
 
-li:nth-child(1) {
-   grid-row-start: 1;
-}
+// li:nth-child(1) {
+//    grid-row-start: 1;
+// }
 
-li:nth-child(2) {
-   grid-row-start: 2;
-}
+// li:nth-child(2) {
+//    grid-row-start: 2;
+// }
 
-li:nth-child(3) {
-   grid-row-start: 1;
-}
+// li:nth-child(3) {
+//    grid-row-start: 1;
+// }
 
-li:nth-child(4) {
-   grid-row-start: 3;
-}
+// li:nth-child(4) {
+//    grid-row-start: 3;
+// }
 
 // li::before {
 //    content: "●";

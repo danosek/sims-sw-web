@@ -1,0 +1,224 @@
+---
+interface Props {
+   title: string;
+   name: string;
+   colorDesktop: string;
+   colorWeb: string;
+   colorMobile: string;
+}
+
+const { title, name, colorDesktop, colorWeb, colorMobile } = Astro.props;
+import "../styles/spectro-theme.css";
+import "../styles/index.less";
+import "../styles/comparison.less";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+
+const cellBgDesktop = `var(--surface-${colorDesktop}-strong)`;
+const cellBgWeb = `var(--surface-${colorWeb}-strong)`;
+const cellBgMobile = `var(--surface-${colorMobile}-strong)`;
+
+const cellShadowDesktop = `var(--surface-${colorDesktop}-subtle)`;
+const cellShadowWeb = `var(--surface-${colorWeb}-subtle)`;
+const cellShadowMobile = `var(--surface-${colorMobile}-subtle)`;
+
+const cellTextDesktop = `var(--text-${colorDesktop})`;
+const cellTextWeb = `var(--text-${colorWeb})`;
+const cellTextMobile = `var(--text-${colorMobile})`;
+
+const pattern = `url(\"${import.meta.env.BASE_URL}assets/img/comparison-pattern.jpg\")`;
+---
+
+<style define:vars={{ cellBgDesktop, cellBgWeb, cellBgMobile, cellShadowDesktop, cellShadowWeb, cellShadowMobile, cellTextDesktop, cellTextWeb, cellTextMobile, pattern}}></style>
+
+<html lang="cs">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Astro description" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{title}</title>
+   </head>
+   <body>
+      <Nav index={false} />
+      <main>
+         <header>
+            <h1>{name}</h1>
+         </header>
+
+         <table-container>
+            <table>
+               <thead>
+                  <tr
+                     ><th> </th>
+                     <th
+                        ><a href=`${import.meta.env.BASE_URL}desktop/`
+                           >Desktop</a
+                        ></th
+                     >
+                     <th><a href=`${import.meta.env.BASE_URL}web/`>Web</a></th>
+                     <th
+                        ><a href=`${import.meta.env.BASE_URL}mobile/`
+                           >Mobile
+                        </a></th
+                     >
+                  </tr></thead
+               >
+               <tbody>
+                  <tr>
+                     <td>Zavádění objektů do systému</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>Příjem zpráv</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>Historie a filtr zpráv</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>Obsluhy poplachových zpráv</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>PCO</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Střežené objekty (koncová zařízení)</td>
+                     <td>●</td>
+                     <td>○</td>
+                     <td>○</td>
+                  </tr>
+                  <tr>
+                     <td>Přenosové formáty / Události formátů / Události</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Skupiny</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Atributy</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Uživatelé</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td>○</td>
+                  </tr>
+                  <tr>
+                     <td>Kontakty</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>Číselné kódy</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>Ovládání výstupů (M2M)</td>
+                     <td> </td>
+                     <td> </td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>SMS </td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>E-maily </td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Plánovač</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Evidence výjezdovek</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Otevírací doba / Limity / Limity obnovy </td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Události SMS</td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Periodické tisky </td>
+                     <td>●</td>
+                     <td> </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td colspan="4"><b>Lokátory</b></td>
+                  </tr>
+                  <tr>
+                     <td>Poslední známá pozice</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>●</td>
+                  </tr>
+                  <tr>
+                     <td>Historie polohy</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td>○</td>
+                  </tr>
+                  <tr>
+                     <td>Geo zóny</td>
+                     <td>●</td>
+                     <td>●</td>
+                     <td> </td>
+                  </tr>
+               </tbody>
+            </table>
+         </table-container>
+         <dl>
+            <dt>●</dt>
+            <dd>Obsahuje</dd>
+            <dt>○</dt>
+            <dd>Obsahuje částečně</dd>
+         </dl>
+      </main>
+      <Footer />
+      <!-- <script src="../scripts/DetectSystemTheme.js"></script> -->
+   </body>
+</html>

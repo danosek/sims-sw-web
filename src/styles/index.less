@@ -1,71 +1,93 @@
 @import "_includes/_typography.less";
 
 :root {
-    /* Typography */
-    --font-stack: "intr", system-ui, sans-serif;
-    --font-stack-headings: "pjs", system-ui, sans-serif;
-    --font-stack-mono: "IBM Plex Mono", monospace;
-    --container-size: 1600px;
+   /* Typography */
+   --font-stack: "intr", system-ui, sans-serif;
+   --font-stack-headings: "pjs", system-ui, sans-serif;
+   --font-stack-mono: "IBM Plex Mono", monospace;
+   --container-size: 1600px;
 
-    /* Sharpiness */
-    --radius: 4px;
-    --radius-2x: 8px;
-    --radius-3x: 20px;
+   /* Sharpiness */
+   --radius: 4px;
+   --radius-2x: 8px;
+   --radius-3x: 20px;
+   --radius-responsive: clamp(1rem, 3vw, 2rem);
 
-    /* Spacing */
-    --edge-s: 1rem;
-    --edge-l: 8rem;
-    --edge: var(--edge-s);
+   /* Spacing */
+   --edge-s: var(--base-2);
+   --edge-l: var(--base-8);
+   --edge: var(--edge-s);
 
-    --tag-padding: 0 0.2ch;
-    --tag-margin: 0 -0.2ch;
+   --tag-padding: 0 0.2ch;
+   --tag-margin: 0 -0.2ch;
 
-    --header-height: 3rem;
+   --header-height: 3rem;
 
-    /* Border */
-    --border-width: 2px;
-    --border-style: dashed;
+   --padding-responsive: clamp(var(--base), 8vw, 4rem);
+   --padding-responsive-dense: clamp(var(--base-h), 8vw, 2rem);
 
-    --transition: all .15s ease-out;
+   /* Border */
+   --border-width: 2px;
+   --border-style: dashed;
 
-    @media only screen and (min-width: 900px) {
-       --edge: var(--edge-l);
-       --header-height: 4rem;
-    }
- }
- html {
-    font-family: var(--font-stack);
-    background: var(--surface-main);
-    color: var(--text-primary);
- }
+   --transition: all .15s ease-out;
 
- body {
-    margin: 0;
- }
+   --turn: .34turn;
 
- :is(main, footer) {
-    inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
-    margin-inline: auto;
- }
+   @media only screen and (min-width: 900px) {
+      --edge: var(--edge-l);
+      --header-height: 4rem;
+   }
+}
 
- a[href*="/comparison/"] {
+html {
+   font-family: var(--font-stack);
+   background: var(--surface-main);
+   color: var(--text-primary);
+   box-sizing: border-box;
+   min-width: 320px;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   height: 100%;
+}
+
+main, footer {
+   inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
+   margin-inline: auto;
+}
+
+
+a[href*="/comparison/"] {
+   --comparison-bg: var(--surface-black-strong);
+
    display: block;
    inline-size: fit-content;
    margin-inline: auto;
    margin-block-start: 3rem;
    .font-l();
-   color: var(--text-brand-primary);
+   background-color: var(--comparison-bg);
+   color: var(--text-primary-on-surface-black-strong);
    text-decoration: none;
-   border: 2px solid;
-   padding: 1rem;
+   padding: 1.5rem 2rem;
    border-radius: var(--radius-circle);
    line-height: 1;
-   background-color: var(--surface-control);
    transition: var(--transition);
    //box-shadow: var(--elevation-04);
+   outline: 4px solid transparent;
+   outline-offset: 2px;
 
    &:hover {
-      background-color: var(--surface-brand-primary-minimal);
+      background-color: var(--surface-black-strong-hover);
       //color: var(--text-primary-on-surface-brand-primary-minimal);
+      outline-color: var(--comparison-bg);
+      outline-offset: 4px;
    }
- }
+}

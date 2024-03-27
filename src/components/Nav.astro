@@ -24,7 +24,7 @@ import logoWithText from "../assets/img/logo.png";
       {
          !index && (
             <>
-               <a href=`${import.meta.env.BASE_URL}`>Zpět domů</a>
+               <a href=`${import.meta.env.BASE_URL}` id="back-home-link">Zpět domů</a>
             </>
          )
       }
@@ -49,13 +49,22 @@ import logoWithText from "../assets/img/logo.png";
       margin-inline: auto;
       padding-block-end: 1rem;
 
+      &:has(#back-home-link) {
+         flex-direction: row;
+         gap: 1rem;
+         align-items: center;
+         padding-block-end: 0;
+      }
+
       @media screen and (min-width: 400px) {
          flex-direction: row;
          gap: 1rem;
          align-items: center;
          padding-block-end: 0;
-
-         // a:first-child {
+         // a:nth-child(2) {
+         //    margin-inline-start: auto;
+         // }
+         // a:last-child {
          //    margin-inline-end: auto;
          // }
       }

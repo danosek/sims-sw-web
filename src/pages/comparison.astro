@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Comparison.astro";
+import products from "../utils/products";
+
+const colorDesktop = products.desktop.color;
+const colorWeb = products.web.color;
+const colorMobile = products.mobile.color;
+---
+
+<Layout
+   title=`Porovnání - SIMS SW`
+   name=`Porovnání SIMS edicí`
+   colorDesktop={colorDesktop}
+   colorWeb={colorWeb}
+   colorMobile={colorMobile}
+/>

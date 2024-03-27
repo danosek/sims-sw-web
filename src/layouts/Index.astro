@@ -1,9 +1,9 @@
 ---
 interface Props {
    title: string;
+   nav?: boolean;
 }
-
-const { title } = Astro.props;
+const { title, nav = true } = Astro.props;
 
 import "../styles/spectro-theme.css";
 import "../styles/index.less";
@@ -22,7 +22,7 @@ import Footer from "../components/Footer.astro";
       <title>{title}</title>
    </head>
    <body>
-      <Nav index={true}/>
+      <Nav index={nav}/>
       <slot />
       <Footer />
       <!-- <script src="../scripts/DetectSystemTheme.js"></script> -->

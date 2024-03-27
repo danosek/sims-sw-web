@@ -5,7 +5,7 @@ const products = {
         img: "computer",
         imgMockup: "mockup-server",
         desc: "Komplexní systém pro bezpečnostní agentury připojující na PCO (pult centrální ochrany) libovolný počet střežených objektů.",
-        color: "navy",
+        color: "deeppurple",
         simsEdition: true,
     },
     web: {
@@ -14,7 +14,7 @@ const products = {
         img: "app-window-mac",
         imgMockup: "mockup-web",
         desc: "Jednoduchá intuitivní webová aplikace vhodná například pro správce budov, vrátnice, výjezdové služby nebo pro koncové zákazníky.",
-        color: "blue",
+        color: "aqua",
         simsEdition: true,
     },
     mobile: {
@@ -23,7 +23,7 @@ const products = {
         img: "smartphone",
         imgMockup: "mockup-mobile",
         desc: "Mobilní aplikace vytvořena v moderní technologii React Native s využitím pro koncové zákazníky, výjezdové služby, technické a manažerské pracovníky bezpečnostních agentur a pro ovládání výstupů M2M Easy 2 bezpečnostních komunikátorů.",
-        color: "aqua",
+        color: "lightgreen",
         simsEdition: true,
     },
     eniterm: {
@@ -32,7 +32,7 @@ const products = {
         img: "radio",
         imgMockup: "mockup-server",
         desc: "Aplikace disponuje ovladači všech nejčastěji používaných bezpečnostních systémů, komunikátorů a lokátorů. Na základě toho jsme schopni přijímat data ze zařízení téměř všech výrobců.",
-        color: "teal",
+        color: "deeporange",
         simsEdition: false,
     },
 }

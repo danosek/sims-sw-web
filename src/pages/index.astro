@@ -2,6 +2,9 @@
 import Layout from "../layouts/Index.astro";
 import Product from "../layouts/ProductCard.astro";
 import products from "../utils/products";
+import Feature from "../layouts/FeatureCard.astro";
+const pattern = `url(\"${import.meta.env.BASE_URL}assets/img/comparison-pattern.jpg\")`;
+const cloudPattern = `url(\"${import.meta.env.BASE_URL}assets/img/cloud-pattern.jpg\")`;
 ---
 
 <Layout title="SIMS SW">
@@ -20,9 +23,8 @@ import products from "../utils/products";
          <p>
             <span>
                Základem našeho software je nepřetržitý příjem dat ze
-               zabezpečovacích zařízení monitorující střežené objekty. Pomocí
-               produktů SIMS vyhodnocujeme a zobrazujeme tato data ve formě
-               zpráv našim zákazníkům v reálném čase.
+               zabezpečovacích zařízení. Naše produkty je vyhodnocují a
+               zaobrazují ve formě zpráv v reálném čase.
             </span>
          </p>
       </about-texts>
@@ -66,61 +68,65 @@ import products from "../utils/products";
          <a href=`${import.meta.env.BASE_URL}comparison/`>Porovnat</a>
       </product-comparison>
       <cloud-vs-local>
-         <h4>Cloud vs lokální úložiště</h4>
-         <p class="p-bg">
-            Našim zákazníkům nabízíme možnost provozovat SIMS spřipojením na náš
-            cloudový server (SIMSWEB.CZ) nebo lokálně na svém serveru. Stejně
-            tak služby (produktu Eniterm) můžou být instalovány na našem
-            komunikačním serveru (SIMSWEB.EU) nebo na serveru zákazníka.
-         </p>
-         <p>
-            Výhodou provozu SIMS na našem cloudovém serveru je, že zákazník si
-            nemusí pořizovat vlastní server s licencí Microsoft SQL Server a
-            nemusí se starat o správu a údržbu databáze. Na cloud serveru má
-            zákazník také k dispozici webovou aplikaci (produkt SIMS Web).
-         </p>
-         <p>
-            Ideální variantou je mít jeden server jako hlavní a druhý používat
-            jako záložní a zprávy zapisovat na oba servery současně. V případě
-            výpadku jednoho ze serverů není zákazník nějak omezen a pracuje
-            nerušeně dál na druhém serveru.
-         </p>
+         <h2>SIMS Cloud</h2>
+         <ul>
+            <Feature
+               title="Náš server pro Vaše data"
+               desc="Našim zákazníkům nabízíme možnost provozovat SIMS spřipojením na náš cloudový server (SIMSWEB.CZ) nebo lokálně na svém serveru. Stejně tak služby (produktu Eniterm) můžou být instalovány na našem komunikačním serveru (SIMSWEB.EU) nebo na serveru zákazníka."
+               img="server"
+               color="red"
+            />
+            <Feature
+               title="Bezúdržbový chod"
+               desc="Výhodou provozu SIMS na našem cloudovém serveru je, že zákazník si nemusí pořizovat vlastní server s licencí Microsoft SQL Server a nemusí se starat o správu a údržbu databáze. Na cloud serveru má zákazník také k dispozici webovou aplikaci (produkt SIMS Web)."
+               img="tree-palm"
+               color="orange"
+            />
+            <Feature
+               title="Zálohujeme"
+               desc="Ideální variantou je mít jeden server jako hlavní a druhý používat jako záložní a zprávy zapisovat na oba servery současně. V případě výpadku jednoho ze serverů není zákazník nějak omezen a pracuje nerušeně dál na druhém serveru."
+               img="database-backup"
+               color="amber"
+            />
+         </ul>
       </cloud-vs-local>
 
       <!-- Contact-->
-      <h2 id="contact">Kontakt</h2>
-      <boxes>
-         <box>
-            <p>SW SIMS safety, s.r.o.</p>
-         </box>
-         <box>
-            <p><b>IČO</b><span>28648803</span></p>
-         </box>
-         <box>
-            <p><b>Schránka</b><span>zw9x6cy</span></p>
-         </box>
-         <box>
-            <p>
-               <b>Adresa</b>
-               <address>
-                  <span>Na Výsluní 477</span><span>783 61 Hlubočky</span>
-               </address>
-            </p>
-         </box>
-         <box>
-            <p><b>E-mail</b><a href="mailto:info@sims.cz">info@sims.cz</a></p>
-         </box>
-         <box>
-            <p>
-               <b>Telefon</b><a href="tel:+420602748687"
-                  >+420&nbsp;602&nbsp;748&nbsp;687</a
-               >
-            </p>
-         </box>
-      </boxes>
+      <contact-container>
+         <h2 id="contact">Kontakt</h2>
+         <h3>SW SIMS safety, s.r.o.</h3>
+         <boxes>
+            <box>
+               <p><b>IČO</b><span>28648803</span></p>
+            </box>
+            <box>
+               <p><b>Schránka</b><span>zw9x6cy</span></p>
+            </box>
+            <box>
+               <p>
+                  <b>Adresa</b>
+                  <address>
+                     <span>Na Výsluní 477</span><span>783 61 Hlubočky</span>
+                  </address>
+               </p>
+            </box>
+            <box>
+               <p>
+                  <b>E-mail</b><a href="mailto:info@sims.cz">info@sims.cz</a>
+               </p>
+            </box>
+            <box>
+               <p>
+                  <b>Telefon</b><a href="tel:+420602748687"
+                     >+420&nbsp;602&nbsp;748&nbsp;687</a
+                  >
+               </p>
+            </box>
+         </boxes>
+      </contact-container>
    </main>
 </Layout>
 
-<style lang="less">
+<style lang="less" define:vars={{ pattern, cloudPattern }}>
    @import "../styles/homepage.less";
 </style>

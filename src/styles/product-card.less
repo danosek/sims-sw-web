@@ -19,11 +19,15 @@ product {
    transition: var(--transition);
    //background-image: url("../assets/img/pattern-2.png");
    background-size: cover;
+   outline: 4px solid transparent;
+   outline-offset: 2px;
    
    &:hover {
       
       background-blend-mode: hard-light;
       background-color: var(--productCardBgHover);
+      outline-color: var(--productCardBg);
+      outline-offset: 4px;
 
    //    a[href] {
    //       text-decoration: underline;

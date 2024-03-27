@@ -32,19 +32,22 @@
 
 <style>
    footer {
-      padding-block-start: clamp(4rem, 10vw, 8rem);
-      color: var(--text-secondary);
+      padding-block-start: var(--padding-responsive);
+      color: var(--text-secondary-on-surface-brand-primary-subtle);
+      position: relative;
    }
    footer-content {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-      inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)));
+      /* inline-size: min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge))); */
       margin-inline: auto;
-      padding: clamp(1rem, 10vw, 2rem);
-      background-color: var(--surface-main-dim);
-      border-start-start-radius: clamp(1rem, 10vw, 2rem);
-      border-start-end-radius: clamp(1rem, 10vw, 2rem);
+      padding: var(--padding-responsive);
+      background-color: var(--surface-base);
+      /* background-image: linear-gradient(var(--turn), var(--surface-brand-primary-subtle), var(--surface-main-translucent)); */
+      border-start-start-radius: var(--radius-responsive);
+      border-start-end-radius: var(--radius-responsive);
    }
 
    p {
