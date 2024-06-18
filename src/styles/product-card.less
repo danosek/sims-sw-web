@@ -12,29 +12,17 @@ product {
    grid-row: span 2;
    cursor: pointer;
    background-repeat: no-repeat;
-   // background-position: 90% 90%;
-   // background-size: 33%;
    background-blend-mode: luminosity;
-   box-shadow: 0 8px 16px -2px var(--product-shadow), 0 2px 4px -1px var(--product-shadow);
    transition: var(--transition);
-   //background-image: url("../assets/img/pattern-2.png");
    background-size: cover;
-   outline: 4px solid transparent;
-   outline-offset: 2px;
    
    &:hover {
       
       background-blend-mode: hard-light;
       background-color: var(--productCardBgHover);
-      outline-color: var(--productCardBg);
-      outline-offset: 4px;
+      box-shadow: var(--productCardGlow);
 
-   //    a[href] {
-   //       text-decoration: underline;
-   //       text-decoration-thickness: 2px;
-   //    }
    }
-
 
    h3 {
       margin-block: 0;

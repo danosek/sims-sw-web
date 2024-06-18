@@ -24,7 +24,7 @@ import logoWithText from "../assets/img/logo.png";
       {
          !index && (
             <>
-               <a href=`${import.meta.env.BASE_URL}` id="back-home-link">Zpět domů</a>
+               <a href=`${import.meta.env.BASE_URL}` id="back-home-link">Zpět</a>
             </>
          )
       }
@@ -77,6 +77,11 @@ import logoWithText from "../assets/img/logo.png";
          font-weight: var(--heading-weight);
          letter-spacing: -0.01ch;
          font-feature-settings: var(--heading-features);
+         &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+         }
       }
    }
 

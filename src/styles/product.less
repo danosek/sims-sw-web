@@ -1,5 +1,15 @@
 @import (reference) url(../styles/_includes/_typography.less);
 
+body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+main {
+   flex: 1;
+}
+
 header {
    display: grid;
    margin-block-start: 1rem;
@@ -11,7 +21,7 @@ header {
    border-radius: clamp(1rem, 10vw, 2rem);
    background-image: var(--pattern);
    background-size: cover;
-   background-blend-mode: luminosity;
+   //background-blend-mode: luminosity;
 
 
    @media screen and (width > 110ch) {

@@ -15,56 +15,30 @@ import products from "../utils/products"
    color={products.desktop.color}
 >
    <p slot="texts">
-      Účelem provozu tohoto produktu je nepřetržitý příjem dat ze
-      zabezpečovacích zařízení monitorujících střežené objekty a zobrazení
-      těchto dat zákazníkovi formou srozumitelných zpráv a alarmů za účelem co
-      možná nejrychlejšího odbavení.
+      Produkt SIMS Desktop je aplikace vyvíjena v technologii Windows Presentation Foundation (WPF), která je součásti Microsoft .NET frameworku pro operační systémy Windows všech verzí. Je to intuitivní aplikace vyvíjena na míru potřebám našich zákazníků (bezpečnostních agentur). Propracovaný systém disponuje množstvím funkcionalit, které usnadňují práci operátorům, technikům a vedoucím pracovníkům.
    </p>
 
    <p slot="texts">
-      Produkt SIMS Desktop je aplikace vyvíjena v technologii Windows
-      Presentation Foundation (WPF), která je součásti Microsoft .NET frameworku
-      pro operační systémy Windows všech verzí. Je to intuitivní aplikace
-      vyvíjena na míru potřebám našich zákazníků (bezpečnostních agentur).
-      Propracovaný systém disponuje množstvím funkcionalit, které usnadňují
-      práci operátorům, technikům ale i vedoucím pracovníkům.
+      Naše služby s ovladači přijímají data, která v aplikaci SIMS zobrazujeme v reálném čase formou srozumitelných zpráv. Přijaté zprávy se třídí dle jejich významu na úrovni databáze, stejně jako automatické ukončování limitů a dalších automatik, které napomáhají operátorům k rychlému odbavení alarmů. Díky tomu jediný operátor dokáže bez problému hlídat tisíce střežených objektů.
    </p>
 
    <p slot="texts">
-      Přijaté zprávy se třídí dle jejich významu na úrovni databáze, stejně jako automatické
-      ukončování limitů a dalších automatik, které napomáhají operátorům k
-      rychlému odbavení alarmů. Díky tomu jediný operátor dokáže bez problému
-      hlídat tisíce střežených objektů. Náš systém je vyvíjen na základě podnětů
-      našich zákazníků posbíraných po dobu více než třicetileté praxe. Našim
-      zákazníkům se snažíme vyjít maximálně vstříc a vymýšlíme pro ně
-      nejjednodušší a nejspolehlivější řešení.
+      Náš systém je vyvíjen na základě podnětů našich zákazníků posbíraných po dobu více než třicetileté praxe. Našim zákazníkům se snažíme vyjít maximálně vstříc a společnou prací vymýšlíme nejlepší řešení.
    </p>
 
    <h2>Funkce</h2>
 
    <ul>
       <Feature
-         title="Zavedení objektů"
+         title="Zavádění objektů"
          desc="Automatické vytvoření objektu z první příchozí zprávy"
          img="blocks"
          color="red"
       />
       <Feature
          title="Monitorované objekty"
-         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101)"
+         desc="EZS, PZS, komunikátory, SMS Modemy, Lokátory (Active Track, GT100, GT101, GT300) – zobrazení aktuální a historické polohy na mapě, Geo zóny, RFID kódy – obchůzky"
          img="radio"
-         color="pink"
-      />
-      <Feature
-         title="RFID kódy"
-         desc="Idelání pro kontrolu na obchůzce"
-         img="cpu"
-         color="pink"
-      />
-      <Feature
-         title="Zobrazení objektů na mapě"
-         desc="Real-time a historie"
-         img="map-pinned"
          color="pink"
       />
       <Feature
@@ -80,10 +54,22 @@ import products from "../utils/products"
          color="deeppurple"
       />
       <Feature
-         title="Periodické testy, Časové limity"
-         desc="Automatické ukončování s nově příchozím testem"
-         img="timer-reset"
+         title="Rychlá obsluha alarmů"
+         desc="Výběr z předem nadefinovaných prací, odeslání polohy objektu na telefon výjezdové hlídky"
+         img="bell-dot"
          color="navy"
+      />
+      <Feature
+         title="Odkazy na objektech"
+         desc="Možnost si vytvořit vlastní tlačítka, která se zobrazí při alarmu s různými funkcemi – spouštění odkazů na popředí, na pozadí, odeslání předem nadefinovaných SMS, vytáčení hovorů, a to vše jedním stisknutím předem nastavených tlačítek"
+         img="sparkles"
+         color="blue"
+      />
+      <Feature
+         title="Autotesty"
+         desc="Periodické testy, nastavení intervalů a hlídání jejich přijetí – Časové limity, automatické ukončování časových limitů s nově příchozí zprávou/autotestem"
+         img="list-todo"
+         color="lightblue"
       />
       <Feature
          title="Číselné kódy"
@@ -92,34 +78,83 @@ import products from "../utils/products"
          color="blue"
       />
       <Feature
-         title="Zprávy"
-         desc="Zprávy, Zprávy z objektu, historie zpráv"
-         img="square-stack"
-         color="lightblue"
-      />
-      <Feature
-         title="Hovory"
-         desc="Vytáčení a přijímání hovorů a zaznamenávání jejich průběhů"
-         img="phone-call"
+         title="Vlastní události"
+         desc="Možnost definovat vlastní příchozí události a popisy"
+         img="siren"
          color="aqua"
       />
       <Feature
-         title="Události"
-         desc="Události, Otevírací doby, Limity, Obnovy událostí"
-         img="siren"
+         title="Vlastní reakce na události"
+         desc="Možnost nastavení, jak reagovat na veškeré příchozí události – automatické odesílání SMS, emailů, automatické vytvoření reakční události"
+         img="wand"
          color="teal"
       />
       <Feature
-         title="SMS"
-         desc="SMS, Emaily, Události SMS"
-         img="message-circle-more"
+         title="Hlídání otevírací doby"
+         desc="Nepovolené otevření, absence zavřeno, vlastní události"
+         img="clock-10"
          color="green"
+      />
+      <Feature
+         title="Obnova události"
+         desc="Automatické ukončení události, když přijde předem nadefinovaná událost – obnova"
+         img="timer-reset"
+         color="lightgreen"
+      />
+      <Feature
+         title="Filtry"
+         desc="Rychlé filtrování zpráv z objektů, historie zpráv, historie obsluh"
+         img="filter"
+         color="lime"
+      />
+      <Feature
+         title="SMS, Emaily, Události SMS"
+         desc="Možnost nastavit, jak reagovat na libovolnou příchozí SMS"
+         img="message-circle-more"
+         color="yellow"
+      />
+      <Feature
+         title="Hovory"
+         desc="Vytáčení hovorů, přijímání hovorů a zaznamenání jejich průběhu, rozpoznání volajícího a zobrazení jeho objektu před přijetím hovoru"
+         img="phone-call"
+         color="amber"
       />
       <Feature
          title="Plánovač"
          desc="Plánovač, Karta objektu, Výjezdové služby"
          img="calendar-range"
-         color="lightgreen"
+         color="orange"
       />
+      <Feature
+         title="Evidence výjezdové služby"
+         desc=""
+         img="car"
+         color="deeporange"
+      />
+      <Feature
+         title="Tisky sestav"
+         desc="Periodické tisky sestav, výběr z předem nadefinovaných šablon, možnost vytvoření vlastních šablon s vlastním logem, formáty: doc, docx, pdf, html, export dat do csv"
+         img="printer"
+         color="red"
+      />
+      <Feature
+         title="Skupiny objektů"
+         desc="Členění objektů do skupin a přidělování skupin uživatelům, nastavení uživatelských přístupových práv"
+         img="component"
+         color="pink"
+      />
+      <Feature
+         title="Správa formátů"
+         desc="Správa přenosových formátů a událostí formátů, možnost definovat vlastní přenosové formáty"
+         img="audio-lines"
+         color="fuchsia"
+      />
+      <Feature
+         title="Záloha"
+         desc="Možnost automatické zálohy databáze na záložní úložiště s automatickou obnovou databáze"
+         img="database-backup"
+         color="deeppurple"
+      />
+      
    </ul>
 </Layout>

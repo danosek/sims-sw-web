@@ -14,6 +14,7 @@ const bgUrl = `url(\"../assets/img/${img}.svg\")`;
 const productCardBg = `var(--surface-${color}-contrast)`;
 const productCardBgHover = `var(--surface-${color}-contrast-hover)`;
 const productCardColor = `var(--text-primary-on-surface-${color}-contrast)`;
+const productCardGlow = `var(--glow-${color}-strong)`;
 const pattern = `url(\"../assets/img/pattern-${url}.png\")`;
 ---
 
@@ -28,5 +29,5 @@ const pattern = `url(\"../assets/img/pattern-${url}.png\")`;
 </product>
 
 
-<style define:vars={{ bgUrl, productCardBg, productCardBgHover, productCardColor, pattern }}>
+<style define:vars={{ bgUrl, productCardBg, productCardBgHover, productCardColor, productCardGlow, pattern }}>
 </style>

@@ -170,25 +170,26 @@ boxes {
 
 box {
 
-   &:not(:first-of-type) {
-      // padding: var(--padding-responsive-dense);
-      // background-color: var(--surface-main-variant);
-      // border-radius: var(--radius-strong);
-      //border: 1px solid var(--border-subtle);
-   }
-
+   
    p {
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin: 0;
-      gap: .5rem
+      gap: .25rem;
+   }
+
+   span, a {
+      color: var(--text-secondary);
    }
 }
 
 address {
    display: flex;
    flex-direction: column;
+   align-items: center;
    margin-block-start: .5rem;
+   font-style: normal;
 }
 
 cloud-vs-local {

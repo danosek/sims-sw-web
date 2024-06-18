@@ -15,69 +15,72 @@ import products from "../utils/products";
    color={products.mobile.color}
 >
    <p slot="texts">
-      Účelem provozu této aplikace je nepřetržitý příjem dat ze zabezpečovacích
-      zařízení monitorující střežené objekty a zobrazení těchto dat zákazníkovi
-      formou srozumitelných zpráv a alarmů v reálném čase v jeho mobilním
-      telefonu.
+      Účelem provozu této aplikace je nepřetržitý příjem dat ze zabezpečovacích zařízení monitorující střežené objekty a zobrazení těchto dat zákazníkovi formou srozumitelných zpráv a alarmů v reálném čase v jeho mobilním telefonu nebo tabletu. Nedílnou součástí je ovládání výstupů EBS a M2M komunikátorů
    </p>
 
    <p slot="texts">
-      Pro mobilní zařízení se systémem Android je aplikace dostupná na službě
-      Google play, pro mobilní zařízení s operačním systémem iOS je aplikace
-      dostupná na App Store. Uživatelé, kteří používají M2M Easy 2 komunikátory,
-      mohou ovládat jeho výstupy, na které mohou mít připojené například
-      bezpečnostní ústředny, brány, vrata, osvětlení, zavlažování, rolety atd.
+      Pro mobilní zařízení se systémem Android je aplikace dostupná na Google play, pro mobilní zařízení s operačním systémem iOS bude aplikace dostupná na App Store.
    </p>
 
    <p slot="texts">
-      Alarmové zprávy přicházejí prostřednictvím tzv. PUSH notifikací, které se
-      zobrazí na obrazovce mobilního zařízení a klikem na ně se otevře aplikace
-      s detailem alarmové zprávy.
+      Alarmové zprávy přicházejí prostřednictvím tzv. PUSH notifikací, které se zobrazí na obrazovce mobilního zařízení, zároveň se přehraje alarmový zvuk a klikem na notifikaci se otevře aplikace s detailem alarmové zprávy.
    </p>
 
    <h2>Funkce</h2>
    <ul>
       <Feature
-         title="Zavedení objektů"
+         title="Zavádění objektů"
          desc="Automatické vytvoření objektu z první příchozí zprávy"
          img="blocks"
          color="red"
       />
       <Feature
          title="Monitorované objekty"
-         desc="EZS, PZS, komunikátory, Lokátory (Tracker, GT100, GT101)"
+         desc="EZS, PZS, komunikátory, SMS Modemy, Lokátory (Active Track, GT100, GT101, GT300) – zobrazení aktuální a historické polohy na mapě, Geo zóny, RFID kódy – obchůzky"
          img="radio"
-         color="pink"
-      />
-      <Feature
-         title="Správa"
-         desc="Přiřazení objektů uživatelům a jejich oprávnění"
-         img="book-user"
          color="fuchsia"
       />
       <Feature
+         title="Správa uživatelů"
+         desc="Přiřazení objektů uživatelům a jejich oprávnění"
+         img="book-user"
+         color="navy"
+      />
+      <Feature
+         title="Správa objektů"
+         desc="Úprava názvu objektu, názvu podsystému a adresy objektu"
+         img="box"
+         color="lightblue"
+      />
+      <Feature
          title="Alarmy"
-         desc="Zobrazení zpráv a alarmů (akcí), zprávy z objektu, historie zpráv"
+         desc="Zobrazení zpráv a alarmů (akcí), zprávy z objektu, historie zpráv, zobrazení GPS pozice na mapě"
          img="bell-ring"
-         color="deeppurple"
+         color="teal"
       />
       <Feature
-         title="Číselné kódy"
-         desc="Číselné kódy, Zobrazení popisu objektu při akci, zobrazení snímků z kamer"
-         img="scan-eye"
-         color="blue"
+         title="Správa alarmů"
+         desc="Obsluha akcí, vytvoření akce operátora, ověřování hesla objektu, odeslání pořízené fotografie nebo videa"
+         img="bell-dot"
+         color="lightgreen"
       />
       <Feature
-         title="Výstupy"
-         desc="Správa a ovládání výstupů a zobrazení vstupů (M2M Easy komunikátorů)"
+         title="Správa kontaktů"
+         desc="Správa kontaktů a číselných kódů"
+         img="book-copy"
+         color="yellow"
+      />
+      <Feature
+         title="Správa I/O"
+         desc="Správa vstupů a výstupů komunikátorů, ovládání výstupů (EBS a M2M komunikátorů"
          img="circle-arrow-out-up-right"
-         color="aqua"
+         color="orange"
       />
       <Feature
          title="Periodické testy, Časové limity"
          desc="Automatické ukončování s nově příchozím testem"
-         img="timer-reset"
-         color="navy"
+         img="list-todo"
+         color="deeporange"
       />
    </ul>
 </Layout>
