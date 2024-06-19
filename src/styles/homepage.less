@@ -140,7 +140,7 @@ products {
 contact-container {
    display: flex;
    flex-direction: column;
-   gap: 2rem;
+   gap: 3rem;
    background-color: var(--surface-main-dim);
    //background-image: linear-gradient(.4turn, var(--surface-brand-primary-minimal), var(--surface-main-translucent));
    border-start-start-radius: var(--radius-responsive);
@@ -157,7 +157,7 @@ contact-container {
    }
 
    h3 {
-      margin-block-end: 1em;
+      margin-block-end: 0;
    }
 }
 
@@ -168,9 +168,64 @@ boxes {
    gap: 1rem clamp(1rem, 6vw, 2rem);
 }
 
-box {
+people {
+   display: grid;
+   justify-content: center;
+   gap: clamp(1rem, 6vw, 4rem);
+}
 
-   
+@container contact (inline-size > 700px) {
+   people {
+      grid-auto-flow: column;
+   }
+}
+
+person {
+   --person-bg: var(--surface-brand-primary-main);
+   --person-color: var(--text-primary-on-brand-primary-main);
+   display: flex;
+   flex-direction: column;
+   column-gap: inherit;
+   row-gap: 1rem;
+
+   &:nth-of-type(1) {
+      --person-bg: var(--surface-navy-subtle);
+      --person-color: var(--text-primary-on-navy-subtle);
+      --person-link-color: var(--text-navy);
+   }
+
+   &:nth-of-type(2) {
+      --person-bg: var(--surface-green-subtle);
+      --person-color: var(--text-primary-on-green-subtle);
+      --person-link-color: var(--text-green);
+   }
+
+   &:nth-of-type(3) {
+      --person-bg: var(--surface-pink-subtle);
+      --person-color: var(--text-primary-on-pink-subtle);
+      --person-link-color: var(--text-pink);
+   }
+
+   p:first-of-type {
+      border-radius: var(--radius-circle);
+      font-weight: 800;
+      display: inline-block;
+      margin-inline: auto;
+      inline-size: fit-content;
+      background-color: var(--person-bg);
+      color: var(--person-color);
+      padding: 0.5ex 1ch;
+      .heading-s();
+      font-size: 80%;
+      margin-block-start: -.5rem;
+   }
+
+   a {
+      color: var(--person-link-color);
+   }
+}
+
+:where(box, person) {
    p {
       display: flex;
       flex-direction: column;
@@ -179,7 +234,7 @@ box {
       gap: .25rem;
    }
 
-   span, a {
+   :where(span, a) {
       color: var(--text-secondary);
    }
 }
@@ -212,10 +267,10 @@ cloud-vs-local {
       padding: 0;
       display: grid;
       gap: var(--padding-responsive-dense);
-      
+
       @media screen and (width > 140ch) {
          grid-template-columns: repeat(3, 1fr);
-         
+
       }
 
    }
