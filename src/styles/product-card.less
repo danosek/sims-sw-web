@@ -1,6 +1,10 @@
 product {
+   --img-scale: 250%;
+   --img-opacity: .2;
+   --img-scale-hover: 200%;
+   --img-opacity-hover: 1;
    padding: 2em;
-   border-radius: var(--radius-strong);
+   border-radius: clamp(1rem, 2vw, 2rem);
    background-color: var(--productCardBg);
    color: var(--productCardColor);
    border: 2px solid var(--product-border);
@@ -15,9 +19,21 @@ product {
    background-blend-mode: luminosity;
    transition: var(--transition);
    background-size: cover;
+
+   svg {
+      position: absolute;
+      top: 2.25em;
+      right: 2.25em;
+      scale: var(--img-scale);
+      pointer-events: none;
+      opacity: var(--img-opacity);
+      transform-origin: top right;
+      transition: .2s all ease-in-out;
+   }
    
    &:hover {
-      
+      --img-scale: var(--img-scale-hover);
+      --img-opacity: var(--img-opacity-hover);
       background-blend-mode: hard-light;
       background-color: var(--productCardBgHover);
       box-shadow: var(--productCardGlow);

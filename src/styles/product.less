@@ -11,14 +11,22 @@ main {
 }
 
 header {
+   --header-padding-min: 2rem;
+   --header-padding-pre: 6vw;
+   --header-padding-max: 5rem;
+
+   --img-padding-min: 1rem;
+   --img-padding-pre: 3vw;
+   --img-padding-max: 2.5rem;
+
    display: grid;
    margin-block-start: 1rem;
    grid-template-columns: 1fr;
    gap: clamp(1rem, 10vw, 2rem);
-   grid-template-areas: "title" "text" "image";
-   padding: clamp(1rem, 10vw, 6rem);
+   //grid-template-areas: "title" "text" "image";
+   padding: clamp(var(--header-padding-min), var(--header-padding-pre), var(--header-padding-max));
    background-color: var(--headerBg);
-   border-radius: clamp(1rem, 10vw, 2rem);
+   border-radius: clamp(var(--header-padding-min), var(--header-padding-pre), var(--header-padding-max));
    background-image: var(--pattern);
    background-size: cover;
    //background-blend-mode: luminosity;
@@ -27,30 +35,51 @@ header {
    @media screen and (width > 110ch) {
       & {
          gap: clamp(1rem, 10vw, 3rem) 5ch;
-         grid-template-columns: 38ch 1fr;
-         grid-template-areas: "title image" "text image";
-         grid-template-rows: min-content 1fr;
+         grid-template-columns: 40ch 1fr;
+         //grid-template-areas: "title image" "text image";
+         //grid-template-rows: min-content 1fr;
+      }
+   
+   }
+}
+
+header-texts {
+   display: flex;
+   flex-direction: column;
+   gap: inherit;
+   // padding: clamp(1rem, 10vw, 6rem);
+
+   @media screen and (min-width: 110ch) {
+      & {
+         // padding: clamp(1rem, 10vw, 6rem);
+         // padding-right: 0;
       }
    
    }
 }
 
 h1 {
-   grid-area: title;
    margin: 0;
    color: var(--headingColor);
 }
+
 img {
-   grid-area: image;
    justify-self: center;
    align-self: center;
    block-size: auto;
    max-inline-size: 100%;
+   padding: 1rem;
+   border: clamp(var(--img-padding-min), var(--img-padding-pre), var(--img-padding-max));
+   border-radius: clamp(var(--img-padding-min), var(--img-padding-pre), var(--img-padding-max));
+
+   &.eniterm {
+      opacity: .2;
+   }
 
    @media screen and (min-width: 110ch) {
       & {
          inline-size: auto;
-         max-block-size: 500px;
+         //max-block-size: 500px;
       }
    
    }
@@ -58,7 +87,6 @@ img {
 
 
 h1 + p {
-   grid-area: text;
    font-size: var(--font-size-l);
    font-weight: var(--text-weight);
    line-height: 1.5;

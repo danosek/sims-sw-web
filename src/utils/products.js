@@ -30,7 +30,7 @@ const products = {
         name: "Eniterm Service",
         url: "eniterm",
         img: "radio",
-        imgMockup: "mockup-server",
+        imgMockup: "hero-eniterm",
         desc: "Aplikace EnitermSvc disponuje ovladači všech nejčastěji používaných bezpečnostních systémů, komunikátorů a lokátorů. Na základě toho jsme schopni přijímat data ze zařízení téměř všech výrobců.",
         color: "deeporange",
         simsEdition: false,

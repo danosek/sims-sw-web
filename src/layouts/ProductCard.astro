@@ -16,13 +16,15 @@ const productCardBgHover = `var(--surface-${color}-contrast-hover)`;
 const productCardColor = `var(--text-primary-on-surface-${color}-contrast)`;
 const productCardGlow = `var(--glow-${color}-strong)`;
 const pattern = `url(\"../assets/img/pattern-${url}.png\")`;
+const { default: svgCode } = await import(`../assets/lucide-origin/${img}.svg?raw`)
 ---
 
 <product>
    <!-- <Image
-      src={import(`../assets/img/${img}.svg`)}
+      src={import(`../assets/lucide-white/${img}.svg`)}
       alt=`Ilustrace znázorňující produkt ${name}`
    /> -->
+   <Fragment set:html={svgCode} />
    <h3><a href=`./${url}`>{name}</a></h3>
    <p>{desc}</p>
    <a href=`./${url}`></a>
