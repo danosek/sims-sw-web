@@ -5,12 +5,12 @@ interface Props {
 const { index } = Astro.props;
 
 import { Image } from "astro:assets";
-import logoWithText from "../assets/img/logo-nav.png";
+import logoWithText from "../assets/img/logo-nav.svg";
 ---
 
 <nav>
    <nav-content>
-      <a href=`${import.meta.env.BASE_URL}`><Image src={logoWithText} alt="SIMS SW logo" /></a>
+      <a href=`${import.meta.env.BASE_URL}`><Image src={logoWithText} alt="SIMS SW logo"}/></a>
 
       {
          index && (
