@@ -40,14 +40,15 @@ import logoWithText from "../assets/img/logo-nav.svg";
       background-color: var(--surface-main-translucent);
       z-index: 10;
       height: var(--nav-hight);
+      display: flex;
+      align-items: center;
    }
    nav-content {
       display: flex;
+      align-items: center;
       gap: 0 1rem;
       inline-size: ~"min(calc(100% - var(--edge)), calc(var(--container-size) - var(--edge)))";
       margin-inline: auto;
-      padding-block: 1rem;
-
       @media screen and (min-width: 480px) {
          column-gap: 2rem;
       }
@@ -76,6 +77,6 @@ import logoWithText from "../assets/img/logo-nav.svg";
 
 <style is:global>
    :root {
-      --nav-hight: 80px;
+      --nav-hight: 64px;
    }
 </style>
