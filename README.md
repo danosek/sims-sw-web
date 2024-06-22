@@ -53,3 +53,45 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## SIMS SW
+
+### Ikony
+
+Používá se sada [Lucide](https://lucide.dev). V projektu jsou jsou tři složky
+
+- `lucide-origin`: Originální sada, SVG dědí barvu
+- `lucide`: Barva se nastavuje pomocí CSS proměnné `--varIconColor`
+- `lucide-white`: Barva je bílá, nepoužívá se nikde, ale kdyby náhodou…
+
+Kdyby bylo potřeba balík Lucide updatovat, stačí jej nakopírovat do složky `lucide-origin` a spustit `./replace_svg.sh`, který vytvoří složky `lucide` a `lucide-white` s potřebnými úpravami v `.svg` souborech.
+
+### Styly `spectro-theme-[*].css`
+
+Jedná se design systém [Spectro](https://teaf.tescosw.cz/mw/design/system/tokens/), který jsem vytvořil. CSS se generuje se v nástroji [Motivo](https://teaf.tescosw.cz/mw/design/tool/motivo/), jehož jsem taky autorem. Lze si navolit branding, tzv. primární a sekundární barvu. Používá se jak pro globální téma, tak pro témata jednotlivých produktů. Nastavení daného tématu jde vidět přímo na začátku CSS souboru, např.
+
+```css
+/*
+    
+Version
+-------
+Spectro: 1.2
+TEAF:    24.01, 24.02
+
+Selected options
+----------------
+Brand
+Primary:   Blue
+Secondary: Teal
+
+Neutral Surfaces Chroma
+Intensity: III
+Based on:  Blue
+
+Contrast
+Level: High (AA)
+
+*/
+```
+
+Jak používat jednotivé tokeny a barvy je pospáno v dokumentaci [Spectra](https://teaf.tescosw.cz/mw/design/system/tokens/).

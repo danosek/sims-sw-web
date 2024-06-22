@@ -1,4 +1,8 @@
 ---
+/* 
+Kartička fíčury produktu
+*/
+
 interface Props {
    title: string;
    desc: string;
@@ -7,19 +11,23 @@ interface Props {
 }
 
 const { title, desc, img, color } = Astro.props;
-const bgUrl = `url(\"../assets/img/${color}.svg\")`;
+
+/* CSS proměné */
 const varBgCard = `var(--surface-${color}-minimal)`;
 const varBg = `var(--surface-${color}-subtle)`;
 const varColor = `var(--text-primary-on-surface-${color}-strong)`;
 const varIconColor = `var(--text-${color})`;
 const varIconBg = `var(--surface-${color}-minimal)`;
 
+/*
+SVG kód ikony, který se vloží do HTML
+Nutné pro obarvování dle barvy karty
+*/
 const { default: svgCode } = await import(`../assets/lucide/${img}.svg?raw`)
 
 ---
 
 <li>
-   <!-- <Image src={import(`../assets/img/${img}.svg`)} alt=`${img}` /> -->
    <icon-wrapper><Fragment set:html={svgCode} /></icon-wrapper>
    <h3>{title}</h3>
    <p>{desc}</p>

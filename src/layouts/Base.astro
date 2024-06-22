@@ -1,4 +1,9 @@
 ---
+/* 
+Základní layout
+Používá se pro hlavní stránku a pricipů data processingu
+*/
+
 interface Props {
    title: string;
    nav?: boolean;
@@ -26,6 +31,5 @@ import Footer from "../components/Footer.astro";
       <Nav index={nav}/>
       <slot />
       <Footer />
-      <!-- <script src="../scripts/DetectSystemTheme.js"></script> -->
    </body>
 </html>

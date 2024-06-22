@@ -1,4 +1,8 @@
 ---
+/* 
+Layout pro porovnání edicí
+*/
+
 interface Props {
    title: string;
    name: string;
@@ -8,13 +12,14 @@ interface Props {
 }
 
 const { title, name, colorDesktop, colorWeb, colorMobile } = Astro.props;
+
 import "../styles/spectro-theme.css";
 import "../styles/index.less";
 import "../styles/comparison.less";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import { Image } from "astro:assets";
 
+/* CSS proměnné */
 const cellBgDesktop = `var(--surface-${colorDesktop}-strong)`;
 const cellBgWeb = `var(--surface-${colorWeb}-strong)`;
 const cellBgMobile = `var(--surface-${colorMobile}-strong)`;
@@ -215,6 +220,5 @@ const pattern = `url(\"${import.meta.env.BASE_URL}assets/img/comparison-pattern.
          </dl>
       </main>
       <Footer />
-      <!-- <script src="../scripts/DetectSystemTheme.js"></script> -->
    </body>
 </html>

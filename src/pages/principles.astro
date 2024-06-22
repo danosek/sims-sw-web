@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Index.astro";
+import Layout from "../layouts/Base.astro";
 ---
 
 <Layout title="Principles - SIMS SW" nav={false}>
@@ -50,7 +50,7 @@ import Layout from "../layouts/Index.astro";
 
 <style lang="less">
    :root {
-      --container-size: 80ch;
+      --container-size: 80ch !important;
    }
 
    :where(p, li) {

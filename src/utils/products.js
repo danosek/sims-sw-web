@@ -1,3 +1,15 @@
+/*
+Seznam produktů
+
+name: Jméno
+url: Odkaz na stránce nebo suffix pro soubor
+img: Název ikony v ProductCard.astro
+imgMockup: Název obrázku v Product.astro
+desc: Text popisu pro ProductCard.astro a Product.astro
+color: Barva z https://teaf.tescosw.cz/mw/design/system/palette/
+simsEdition: bool
+*/
+
 const products = {
     desktop: {
         name: "SIMS Desktop",

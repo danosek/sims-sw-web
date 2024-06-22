@@ -1,4 +1,9 @@
 ---
+/* 
+Hlavní navigace
+Připojuje se do všech stránek
+*/
+
 interface Props {
    index: boolean;
 }
@@ -12,6 +17,8 @@ import logoWithText from "../assets/img/logo-nav.svg";
    <nav-content>
       <a href=`${import.meta.env.BASE_URL}`><Image src={logoWithText} alt="SIMS SW logo"}/></a>
 
+      <!-- Na hlavní stránce se zobrazují sekce  -->
+
       {
          index && (
             <>
@@ -20,6 +27,8 @@ import logoWithText from "../assets/img/logo-nav.svg";
             </>
          )
       }
+
+      <!-- Jinak se zobrazuje odkaz "Zpět"  -->
 
       {
          !index && (
@@ -67,11 +76,6 @@ import logoWithText from "../assets/img/logo-nav.svg";
             text-underline-offset: 2px;
          }
       }
-   }
-
-   img {
-      //inline-size: ~"clamp(128px, 18vw, 160px)";
-      //block-size: 48px;
    }
 </style>
 

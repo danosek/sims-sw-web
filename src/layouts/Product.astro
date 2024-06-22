@@ -1,4 +1,7 @@
 ---
+/*
+Layout pro stránku prodkuktu 
+*/
 interface Props {
    title: string;
    name: string;
@@ -10,14 +13,14 @@ interface Props {
 }
 
 const { title, name, url, desc, img, simsEdition, color } = Astro.props;
-//import "../styles/spectro-theme.css";
+
 import "../styles/index.less";
 import "../styles/product.less";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
-import Feature from "../layouts/FeatureCard.astro";
 
+/* CSS proměnné */
 const textGradient = `var(--surface-${color}-minimal)`;
 const headingColor = `var(--text-primary-on-surface-${color}-contrast)`;
 const headerColor = `var(--text-primary-on-surface-${color}-contrast)`;
@@ -59,6 +62,8 @@ const pattern = `url(\"${import.meta.env.BASE_URL}assets/img/hero-pattern-${url}
 
 
          <slot />
+
+         <!-- U Enitermm se tlačítko s porovnáním nezobrazí -->
          
          {
             simsEdition && (
@@ -67,7 +72,6 @@ const pattern = `url(\"${import.meta.env.BASE_URL}assets/img/hero-pattern-${url}
          }
       </main>
       <Footer />
-      <!-- <script src="../scripts/DetectSystemTheme.js"></script> -->
    </body>
 </html>
 

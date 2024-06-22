@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Index.astro";
-import Product from "../layouts/ProductCard.astro";
+import Layout from "../layouts/Base.astro";
+import Product from "../components/ProductCard.astro";
 import products from "../utils/products";
-import Feature from "../layouts/FeatureCard.astro";
+import Feature from "../components/FeatureCard.astro";
 const pattern = `url(\"${import.meta.env.BASE_URL}assets/img/logo.svg\")`;
 const cloudPattern = `url(\"${import.meta.env.BASE_URL}assets/img/cloud-pattern.jpg\")`;
 ---

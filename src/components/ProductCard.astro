@@ -1,4 +1,9 @@
 ---
+/* 
+Kartička produktu
+Zobrazuje se na hlavní stránce
+*/
+
 interface Props {
    name: string;
    url: string;
@@ -9,21 +14,23 @@ interface Props {
 
 const { name, url, desc, img, color } = Astro.props;
 import "../styles/product-card.less";
-import { Image } from "astro:assets";
+
+/* CSS proměnné */
 const bgUrl = `url(\"../assets/img/${img}.svg\")`;
 const productCardBg = `var(--surface-${color}-contrast)`;
 const productCardBgHover = `var(--surface-${color}-contrast-hover)`;
 const productCardColor = `var(--text-primary-on-surface-${color}-contrast)`;
 const productCardGlow = `var(--glow-${color}-strong)`;
 const pattern = `url(\"../assets/img/pattern-${url}.jpg\")`;
+
+/*
+SVG kód ikony, který se vloží do HTML
+Barva ikony dědí barvu písma přímo v SVG pomocí `currentColor`
+*/
 const { default: svgCode } = await import(`../assets/lucide-origin/${img}.svg?raw`)
 ---
 
 <product>
-   <!-- <Image
-      src={import(`../assets/lucide-white/${img}.svg`)}
-      alt=`Ilustrace znázorňující produkt ${name}`
-   /> -->
    <Fragment set:html={svgCode} />
    <h3><a href=`./${url}`>{name}</a></h3>
    <p>{desc}</p>
