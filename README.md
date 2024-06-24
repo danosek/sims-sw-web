@@ -48,7 +48,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `./replace_svg.sh`        | Replace Lucide icons stroke to CSS variable      |
 
 ## 👀 Want to learn more?
 
@@ -95,3 +94,9 @@ Level: High (AA)
 ```
 
 Jak používat jednotivé tokeny a barvy je pospáno v dokumentaci [Spectra](https://teaf.tescosw.cz/mw/design/system/tokens/).
+
+### ☑️ To-do
+
+1. Nastavit v `astro.config.mjs` položku `site` podle potřeby
+2. Nastavit v `astro.config.mjs` položku `base` podle potřeby
+3. Odstranit `deploy.yml`, pokud nebude stránka ležet na GitHub Pages
